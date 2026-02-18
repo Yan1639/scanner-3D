@@ -1,0 +1,62 @@
+[2026-02-18 15:53:28] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_02_18.log (nível: INFO)
+[2026-02-18 15:53:28] [INFO    ] __main__ — ============================================================
+[2026-02-18 15:53:28] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-02-18 15:53:28] [INFO    ] __main__ — ============================================================
+[2026-02-18 15:53:37] [INFO    ] interface — Modo alterado para: Simulado
+[2026-02-18 15:53:41] [INFO    ] interface — Modo alterado para: Real
+[2026-02-18 15:53:45] [INFO    ] interface — Modo alterado para: Simulado
+[2026-02-18 15:53:53] [INFO    ] interface — Modo alterado para: Real
+[2026-02-18 15:53:54] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[2026-02-18 15:53:55] [WARNING ] serial_comm — Nenhuma porta serial detectada
+[2026-02-18 15:53:55] [ERROR   ] serial_comm — Porta do Arduino não encontrada. Verifique a conexão.
+[2026-02-18 15:53:57] [INFO    ] interface — Modo alterado para: Simulado
+[2026-02-18 15:53:58] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=nenhum forma=cilindro
+[2026-02-18 15:53:58] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-02-18 15:53:58] [INFO    ] logica — ICP concluído — erro residual: 0.3561 mm
+[2026-02-18 15:53:58] [INFO    ] logica — Inspeção concluída — defeitos=0 (0.0%) | dist_med=0.356 mm | dist_max=1.552 mm
+[2026-02-18 15:54:03] [INFO    ] interface — Resultado: ✅ PEÇA APROVADA
+[2026-02-18 15:54:07] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=nenhum forma=esfera
+[2026-02-18 15:54:07] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-02-18 15:54:07] [WARNING ] logica — ICP atingiu o limite de 50 iterações sem convergir
+[2026-02-18 15:54:07] [INFO    ] logica — ICP concluído — erro residual: 2.2920 mm
+[2026-02-18 15:54:07] [INFO    ] logica — Inspeção concluída — defeitos=1177 (23.5%) | dist_med=1.962 mm | dist_max=9.785 mm
+[2026-02-18 15:54:16] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[2026-02-18 15:54:31] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=furo superior forma=esfera
+[2026-02-18 15:54:31] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-02-18 15:54:31] [INFO    ] logica — ICP concluído — erro residual: 2.1084 mm
+[2026-02-18 15:54:32] [INFO    ] logica — Inspeção concluída — defeitos=1106 (22.4%) | dist_med=1.856 mm | dist_max=9.637 mm
+[2026-02-18 15:54:33] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[2026-02-18 15:54:43] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=furo superior forma=cilindro
+[2026-02-18 15:54:43] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-02-18 15:54:43] [INFO    ] logica — ICP concluído — erro residual: 0.3559 mm
+[2026-02-18 15:54:43] [INFO    ] logica — Inspeção concluída — defeitos=0 (0.0%) | dist_med=0.361 mm | dist_max=1.594 mm
+[2026-02-18 15:54:44] [INFO    ] interface — Resultado: ✅ PEÇA APROVADA
+[2026-02-18 15:54:50] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=amassado forma=cilindro
+[2026-02-18 15:54:50] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-02-18 15:54:50] [INFO    ] logica — ICP concluído — erro residual: 0.3460 mm
+[2026-02-18 15:54:50] [INFO    ] logica — Inspeção concluída — defeitos=552 (11.0%) | dist_med=0.913 mm | dist_max=5.321 mm
+[2026-02-18 15:54:52] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[2026-02-18 15:54:57] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=esticado forma=cilindro
+[2026-02-18 15:54:57] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-02-18 15:54:57] [INFO    ] logica — ICP concluído — erro residual: 1.1694 mm
+[2026-02-18 15:54:57] [INFO    ] logica — Inspeção concluída — defeitos=385 (7.7%) | dist_med=0.804 mm | dist_max=5.358 mm
+[2026-02-18 15:54:59] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[2026-02-18 15:55:06] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=quebrado forma=cilindro
+[2026-02-18 15:55:06] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-02-18 15:55:06] [INFO    ] logica — ICP concluído — erro residual: 0.3602 mm
+[2026-02-18 15:55:06] [INFO    ] logica — Inspeção concluída — defeitos=905 (23.1%) | dist_med=2.218 mm | dist_max=12.880 mm
+[2026-02-18 15:55:07] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[2026-02-18 15:55:12] [INFO    ] interface — EXECUTAR — ref=True sim=True tol=3.0 defeito=quebrado forma=cilindro
+[2026-02-18 15:55:12] [INFO    ] logica — XYZ salvo: modelo_ok.xyz (1403 pontos)
+[2026-02-18 15:55:13] [INFO    ] interface — Referência salva — 1403 pontos
+[2026-02-18 15:55:16] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=quebrado forma=cilindro
+[2026-02-18 15:55:16] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-02-18 15:55:16] [INFO    ] logica — ICP concluído — erro residual: 0.3459 mm
+[2026-02-18 15:55:16] [INFO    ] logica — Inspeção concluída — defeitos=0 (0.0%) | dist_med=0.350 mm | dist_max=1.229 mm
+[2026-02-18 15:55:17] [INFO    ] interface — Resultado: ✅ PEÇA APROVADA
+[2026-02-18 15:55:20] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=furo superior forma=cilindro
+[2026-02-18 15:55:20] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-02-18 15:55:21] [WARNING ] logica — ICP atingiu o limite de 50 iterações sem convergir
+[2026-02-18 15:55:21] [INFO    ] logica — ICP concluído — erro residual: 3.3194 mm
+[2026-02-18 15:55:21] [INFO    ] logica — Inspeção concluída — defeitos=1400 (35.9%) | dist_med=2.811 mm | dist_max=11.135 mm
+[2026-02-18 15:55:22] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO

@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+
+# Game saves
+save_slot_*.json
+
+# OS
+.DS_Store
+Thumbs.db

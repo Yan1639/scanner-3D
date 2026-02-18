@@ -1,224 +1,52 @@
-# \# Sistema de Inspeção 3D por Nuvem de Pontos
-
-# 
-
-# Projeto em \*\*Python\*\* para inspeção dimensional de peças utilizando \*\*nuvens de pontos 3D\*\*, com suporte a \*\*modo simulado\*\* e \*\*modo real\*\* (via Arduino), além de interface gráfica em \*\*Tkinter\*\*.
-
-# 
-
-# ---
-
-# 
-
-# \## Visão Geral
-
-# 
-
-# O sistema compara uma peça de teste com um \*\*modelo de referência\*\* para identificar \*\*defeitos geométricos\*\*, utilizando técnicas de processamento de nuvem de pontos e busca por vizinhos próximos (KD-Tree).
-
-# 
-
-# Ele pode operar de duas formas:
-
-# 
-
-# \* \*\*Modo Simulado\*\*: geração de geometrias 3D (cilindro ou esfera) com defeitos artificiais.
-
-# \* \*\*Modo Real\*\*: leitura de dados reais enviados por um Arduino via comunicação serial.
-
-# 
-
-# ---
-
-# 
-
-# \## Funcionalidades
-
-# 
-
-# \* Geração de nuvem de pontos 3D simulada
-
-# \* Simulação de defeitos (furo, amassado, esticado, quebrado, etc.)
-
-# \* Carregamento de arquivos \*\*STL\*\*
-
-# \* Salvamento e leitura de modelos de referência (\*\*.xyz\*\*)
-
-# \* Comparação entre nuvens de pontos com tolerância configurável
-
-# \* Visualização 3D interativa
-
-# \* Exportação de resultados em \*\*STL\*\*
-
-# \* Interface gráfica moderna em Tkinter
-
-# 
-
-# ---
-
-# 
-
-# \## Tipos de Defeitos Simulados
-
-# 
-
-# \* Nenhum
-
-# \* Furo lateral
-
-# \* Furo superior
-
-# \* Amassado
-
-# \* Esticado
-
-# \* Falta de tampa
-
-# \* Quebrado
-
-# 
-
-# ---
-
-# 
-
-# \## Tecnologias Utilizadas
-
-# 
-
-# \* \*\*Python 3\*\*
-
-# \* \*\*NumPy\*\*
-
-# \* \*\*SciPy\*\* (KD-Tree, Convex Hull)
-
-# \* \*\*Matplotlib\*\* (visualização 3D)
-
-# \* \*\*Tkinter\*\* (interface gráfica)
-
-# \* \*\*PySerial\*\* (comunicação com Arduino)
-
-# \* \*\*numpy-stl\*\* (leitura e exportação de STL)
-
-# 
-
-# ---
-
-# 
-
-# \## Como Executar
-
-# 
-
-# 1\. Clone o repositório
-
-# 
-
-# ```bash
-
-# git clone https://github.com/seu-usuario/seu-repositorio.git
-
-# ```
-
-# 
-
-# 2\. Instale as dependências
-
-# 
-
-# ```bash
-
-# pip install numpy scipy matplotlib pyserial numpy-stl
-
-# ```
-
-# 
-
-# 3\. Execute o sistema
-
-# 
-
-# ```bash
-
-# python scanner\_3D.py
-
-# ```
-
-# 
-
-# ---
-
-# 
-
-# \## Modo Real (Arduino)
-
-# 
-
-# O Arduino deve enviar dados no formato:
-
-# 
-
-# ```
-
-# camada|distancia|angulo\_mesa|altura\_fuso
-
-# ```
-
-# 
-
-# E finalizar a transmissão com:
-
-# 
-
-# ```
-
-# FIM
-
-# ```
-
-# 
-
-# ---
-
-# 
-
-# \## Estrutura do Projeto
-
-# 
-
-# ```
-
-# scanner\_3D.py   # Código principal do sistema
-
-# modelo\_ok.xyz   # Modelo de referência (gerado pelo sistema)
-
-# README.md       # Documentação do projeto
-
-# ```
-
-# 
-
-# ---
-
-# 
-
-# \## Autor
-
-# 
-
-# \*\*Yan de Lima Pereira\*\*
-
-# 23 anos — Estudante de Python e Sistemas de Inspeção / Visão Computacional
-
-# 
-
-# ---
-
-# 
-
-# \## Status do Projeto
-
-# 
-
-# Projeto em desenvolvimento, utilizado para \*\*estudos e testes experimentais\*\* com foco em inspeção 3D e aprendiz
-
+# 🔍 Sistema de Inspeção 3D — v2.0
+
+## Estrutura do projeto
+
+```
+scanner3d/
+├── config.py       — Todos os parâmetros configuráveis
+├── logica.py       — Matemática, ICP, métricas, I/O
+├── serial_comm.py  — Comunicação serial com Arduino
+├── interface.py    — Interface gráfica Tkinter
+├── main.py         — Ponto de entrada + logging
+└── logs/
+    └── inspecao_YYYY_MM_DD.log
+```
+
+## Como rodar
+
+```bash
+cd scanner3d
+python main.py
+```
+
+## Melhorias implementadas (v2.0)
+
+| # | Melhoria | Arquivo |
+|---|----------|---------|
+| 1 | Arquitetura modular (5 arquivos) | todos |
+| 2 | ICP — alinhamento antes da comparação | `logica.py` → `icp()` |
+| 3 | Métricas industriais completas | `logica.py` → `verificar_defeito()` |
+| 4 | Geração vetorizada com NumPy (sem loops) | `logica.py` → `gerar_casca_*()` |
+| 5 | STL Delaunay (alternativa ao casco convexo) | `logica.py` → `exportar_stl_delaunay()` |
+| 6 | Logging em arquivo rotativo diário | `main.py` → `configurar_logging()` |
+
+## Dependências
+
+```
+numpy
+scipy
+matplotlib
+numpy-stl
+pyserial
+```
+
+## Parâmetros ajustáveis
+
+Edite `config.py` para alterar:
+
+- `TOLERANCIA_PADRAO` — tolerância padrão de inspeção (mm)
+- `ICP_MAX_ITERACOES` — iterações máximas do algoritmo ICP
+- `N_PONTOS_SIMULACAO` — densidade da nuvem simulada
+- `LOG_LEVEL` — nível de detalhe dos logs (`DEBUG` / `INFO` / `WARNING`)
+- `BAUDRATE_SERIAL` — taxa de comunicação com o Arduino
