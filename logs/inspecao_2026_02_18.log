@@ -60,3 +60,27 @@
 [2026-02-18 15:55:21] [INFO    ] logica — ICP concluído — erro residual: 3.3194 mm
 [2026-02-18 15:55:21] [INFO    ] logica — Inspeção concluída — defeitos=1400 (35.9%) | dist_med=2.811 mm | dist_max=11.135 mm
 [2026-02-18 15:55:22] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[2026-02-18 16:26:09] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_02_18.log (nível: INFO)
+[2026-02-18 16:26:09] [INFO    ] __main__ — ============================================================
+[2026-02-18 16:26:09] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-02-18 16:26:09] [INFO    ] __main__ — ============================================================
+[2026-02-18 16:26:17] [INFO    ] interface — Modo alterado para: Simulado
+[2026-02-18 16:26:17] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=nenhum forma=cilindro
+[2026-02-18 16:26:17] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-02-18 16:26:18] [WARNING ] logica — ICP atingiu o limite de 50 iterações sem convergir
+[2026-02-18 16:26:18] [INFO    ] logica — ICP concluído — erro residual: 3.2812 mm
+[2026-02-18 16:26:18] [INFO    ] logica — Inspeção concluída — defeitos=1386 (35.5%) | dist_med=2.764 mm | dist_max=11.029 mm
+[2026-02-18 16:26:18] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[2026-02-18 16:26:50] [INFO    ] interface — EXECUTAR — ref=True sim=True tol=3.0 defeito=nenhum forma=cilindro
+[2026-02-18 16:26:50] [INFO    ] logica — XYZ salvo: modelo_ok.xyz (2500 pontos)
+[2026-02-18 16:26:51] [INFO    ] interface — Referência salva — 2500 pontos
+[2026-02-18 16:27:03] [INFO    ] interface — EXECUTAR — ref=True sim=True tol=3.0 defeito=furo lateral forma=cilindro
+[2026-02-18 16:27:03] [INFO    ] logica — XYZ salvo: modelo_ok.xyz (2430 pontos)
+[2026-02-18 16:27:05] [INFO    ] interface — Referência salva — 2430 pontos
+[2026-02-18 16:27:08] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=nenhum forma=cilindro
+[2026-02-18 16:27:08] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-02-18 16:27:08] [INFO    ] logica — ICP concluído — erro residual: 0.3796 mm
+[2026-02-18 16:27:08] [INFO    ] logica — Inspeção concluída — defeitos=1 (0.0%) | dist_med=0.368 mm | dist_max=3.220 mm
+[2026-02-18 16:27:10] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[2026-02-18 16:27:43] [INFO    ] interface — Modo alterado para: Real
+[2026-02-18 16:27:44] [INFO    ] interface — Modo alterado para: Simulado

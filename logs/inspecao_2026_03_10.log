@@ -1,0 +1,554 @@
+[2026-03-10 21:52:43] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 21:52:43] [INFO    ] __main__ — ============================================================
+[2026-03-10 21:52:43] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 21:52:43] [INFO    ] __main__ — ============================================================
+[2026-03-10 21:53:00] [INFO    ] interface — Modo alterado para: Simulado
+[2026-03-10 21:53:10] [INFO    ] interface — Modo alterado para: Real
+[2026-03-10 22:00:33] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:00:33] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:00:33] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:00:33] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:00:34] [CRITICAL] __main__ — Falha crítica ao iniciar a aplicação: Layout Vertical.Thin.TScrollbar not found
+Traceback (most recent call last):
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\main.py", line 89, in main
+    Interface()
+    ~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 212, in __init__
+    self._criar_janela_principal()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 245, in _criar_janela_principal
+    self._criar_layout()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 266, in _criar_layout
+    self._criar_sidebar(corpo)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 316, in _criar_sidebar
+    sb = ttk.Scrollbar(sidebar_wrap, orient="vertical",
+                       command=self._canvas_scroll.yview,
+                       style="Thin.TScrollbar")
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\ttk.py", line 1100, in __init__
+    Widget.__init__(self, master, "ttk::scrollbar", kw)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\ttk.py", line 536, in __init__
+    tkinter.Widget.__init__(self, master, widgetname, kw=kw)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\__init__.py", line 2794, in __init__
+    self.tk.call(
+    ~~~~~~~~~~~~^
+        (widgetName, self._w) + extra + self._options(cnf))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_tkinter.TclError: Layout Vertical.Thin.TScrollbar not found
+[2026-03-10 22:00:36] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:00:36] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:00:36] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:00:36] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:00:37] [CRITICAL] __main__ — Falha crítica ao iniciar a aplicação: Layout Vertical.Thin.TScrollbar not found
+Traceback (most recent call last):
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\main.py", line 89, in main
+    Interface()
+    ~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 212, in __init__
+    self._criar_janela_principal()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 245, in _criar_janela_principal
+    self._criar_layout()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 266, in _criar_layout
+    self._criar_sidebar(corpo)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 316, in _criar_sidebar
+    sb = ttk.Scrollbar(sidebar_wrap, orient="vertical",
+                       command=self._canvas_scroll.yview,
+                       style="Thin.TScrollbar")
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\ttk.py", line 1100, in __init__
+    Widget.__init__(self, master, "ttk::scrollbar", kw)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\ttk.py", line 536, in __init__
+    tkinter.Widget.__init__(self, master, widgetname, kw=kw)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\__init__.py", line 2794, in __init__
+    self.tk.call(
+    ~~~~~~~~~~~~^
+        (widgetName, self._w) + extra + self._options(cnf))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_tkinter.TclError: Layout Vertical.Thin.TScrollbar not found
+[2026-03-10 22:00:42] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:00:42] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:00:42] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:00:42] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:00:43] [CRITICAL] __main__ — Falha crítica ao iniciar a aplicação: Layout Vertical.Thin.TScrollbar not found
+Traceback (most recent call last):
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\main.py", line 89, in main
+    Interface()
+    ~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 212, in __init__
+    self._criar_janela_principal()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 245, in _criar_janela_principal
+    self._criar_layout()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 266, in _criar_layout
+    self._criar_sidebar(corpo)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 316, in _criar_sidebar
+    sb = ttk.Scrollbar(sidebar_wrap, orient="vertical",
+                       command=self._canvas_scroll.yview,
+                       style="Thin.TScrollbar")
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\ttk.py", line 1100, in __init__
+    Widget.__init__(self, master, "ttk::scrollbar", kw)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\ttk.py", line 536, in __init__
+    tkinter.Widget.__init__(self, master, widgetname, kw=kw)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\__init__.py", line 2794, in __init__
+    self.tk.call(
+    ~~~~~~~~~~~~^
+        (widgetName, self._w) + extra + self._options(cnf))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_tkinter.TclError: Layout Vertical.Thin.TScrollbar not found
+[2026-03-10 22:00:49] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:00:49] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:00:49] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:00:49] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:00:50] [CRITICAL] __main__ — Falha crítica ao iniciar a aplicação: Layout Vertical.Thin.TScrollbar not found
+Traceback (most recent call last):
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\main.py", line 89, in main
+    Interface()
+    ~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 212, in __init__
+    self._criar_janela_principal()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 245, in _criar_janela_principal
+    self._criar_layout()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 266, in _criar_layout
+    self._criar_sidebar(corpo)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 316, in _criar_sidebar
+    sb = ttk.Scrollbar(sidebar_wrap, orient="vertical",
+                       command=self._canvas_scroll.yview,
+                       style="Thin.TScrollbar")
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\ttk.py", line 1100, in __init__
+    Widget.__init__(self, master, "ttk::scrollbar", kw)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\ttk.py", line 536, in __init__
+    tkinter.Widget.__init__(self, master, widgetname, kw=kw)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\__init__.py", line 2794, in __init__
+    self.tk.call(
+    ~~~~~~~~~~~~^
+        (widgetName, self._w) + extra + self._options(cnf))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_tkinter.TclError: Layout Vertical.Thin.TScrollbar not found
+[2026-03-10 22:01:08] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:01:08] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:01:08] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:01:08] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:01:09] [CRITICAL] __main__ — Falha crítica ao iniciar a aplicação: Layout Vertical.Thin.TScrollbar not found
+Traceback (most recent call last):
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\main.py", line 89, in main
+    Interface()
+    ~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 212, in __init__
+    self._criar_janela_principal()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 245, in _criar_janela_principal
+    self._criar_layout()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 266, in _criar_layout
+    self._criar_sidebar(corpo)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 316, in _criar_sidebar
+    sb = ttk.Scrollbar(sidebar_wrap, orient="vertical",
+                       command=self._canvas_scroll.yview,
+                       style="Thin.TScrollbar")
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\ttk.py", line 1100, in __init__
+    Widget.__init__(self, master, "ttk::scrollbar", kw)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\ttk.py", line 536, in __init__
+    tkinter.Widget.__init__(self, master, widgetname, kw=kw)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\__init__.py", line 2794, in __init__
+    self.tk.call(
+    ~~~~~~~~~~~~^
+        (widgetName, self._w) + extra + self._options(cnf))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_tkinter.TclError: Layout Vertical.Thin.TScrollbar not found
+[2026-03-10 22:02:21] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:02:21] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:02:21] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:02:21] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:02:22] [CRITICAL] __main__ — Falha crítica ao iniciar a aplicação: Layout Vertical.Thin.TScrollbar not found
+Traceback (most recent call last):
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\main.py", line 89, in main
+    Interface()
+    ~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 212, in __init__
+    self._criar_janela_principal()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 245, in _criar_janela_principal
+    self._criar_layout()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 266, in _criar_layout
+    self._criar_sidebar(corpo)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 316, in _criar_sidebar
+    sb = ttk.Scrollbar(sidebar_wrap, orient="vertical",
+                       command=self._canvas_scroll.yview,
+                       style="Thin.TScrollbar")
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\ttk.py", line 1100, in __init__
+    Widget.__init__(self, master, "ttk::scrollbar", kw)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\ttk.py", line 536, in __init__
+    tkinter.Widget.__init__(self, master, widgetname, kw=kw)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\__init__.py", line 2794, in __init__
+    self.tk.call(
+    ~~~~~~~~~~~~^
+        (widgetName, self._w) + extra + self._options(cnf))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_tkinter.TclError: Layout Vertical.Thin.TScrollbar not found
+[2026-03-10 22:02:28] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:02:28] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:02:28] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:02:28] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:04:59] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:04:59] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:04:59] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:04:59] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:08:52] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:08:52] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:08:52] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:08:52] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:08:53] [CRITICAL] __main__ — Falha crítica ao iniciar a aplicação: Layout Vertical.Thin.TScrollbar not found
+Traceback (most recent call last):
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\main.py", line 89, in main
+    Interface()
+    ~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 212, in __init__
+    self._criar_janela_principal()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 245, in _criar_janela_principal
+    self._criar_layout()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 266, in _criar_layout
+    self._criar_sidebar(corpo)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 316, in _criar_sidebar
+    sb = ttk.Scrollbar(sidebar_wrap, orient="vertical",
+                       command=self._canvas_scroll.yview,
+                       style="Thin.TScrollbar")
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\ttk.py", line 1100, in __init__
+    Widget.__init__(self, master, "ttk::scrollbar", kw)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\ttk.py", line 536, in __init__
+    tkinter.Widget.__init__(self, master, widgetname, kw=kw)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\__init__.py", line 2794, in __init__
+    self.tk.call(
+    ~~~~~~~~~~~~^
+        (widgetName, self._w) + extra + self._options(cnf))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_tkinter.TclError: Layout Vertical.Thin.TScrollbar not found
+[2026-03-10 22:09:06] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:09:06] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:09:06] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:09:06] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:09:07] [CRITICAL] __main__ — Falha crítica ao iniciar a aplicação: Layout Vertical.Thin.TScrollbar not found
+Traceback (most recent call last):
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\main.py", line 89, in main
+    Interface()
+    ~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 212, in __init__
+    self._criar_janela_principal()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 245, in _criar_janela_principal
+    self._criar_layout()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 266, in _criar_layout
+    self._criar_sidebar(corpo)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 316, in _criar_sidebar
+    sb = ttk.Scrollbar(sidebar_wrap, orient="vertical",
+                       command=self._canvas_scroll.yview,
+                       style="Thin.TScrollbar")
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\ttk.py", line 1100, in __init__
+    Widget.__init__(self, master, "ttk::scrollbar", kw)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\ttk.py", line 536, in __init__
+    tkinter.Widget.__init__(self, master, widgetname, kw=kw)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\__init__.py", line 2794, in __init__
+    self.tk.call(
+    ~~~~~~~~~~~~^
+        (widgetName, self._w) + extra + self._options(cnf))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_tkinter.TclError: Layout Vertical.Thin.TScrollbar not found
+[2026-03-10 22:09:54] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:09:54] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:09:54] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:09:54] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:10:02] [INFO    ] interface — Modo alterado para: Simulado
+[2026-03-10 22:10:10] [INFO    ] interface — Modo alterado para: Real
+[2026-03-10 22:10:10] [INFO    ] interface — Modo alterado para: Simulado
+[2026-03-10 22:10:49] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:10:49] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:10:49] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:10:49] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:11:07] [INFO    ] interface — Modo alterado para: Simulado
+[2026-03-10 22:11:09] [INFO    ] interface — Modo alterado para: Real
+[2026-03-10 22:11:17] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:11:17] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:11:17] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:11:17] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:12:06] [INFO    ] interface — Modo alterado para: Simulado
+[2026-03-10 22:12:08] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=nenhum forma=cilindro
+[2026-03-10 22:12:08] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-03-10 22:12:08] [INFO    ] logica — ICP concluído — erro residual: 0.3852 mm
+[2026-03-10 22:12:08] [INFO    ] logica — Inspeção concluída — defeitos=0 (0.0%) | dist_med=0.374 mm | dist_max=2.950 mm
+[2026-03-10 22:12:10] [INFO    ] interface — Resultado: ✅ PEÇA APROVADA
+[2026-03-10 22:12:38] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=nenhum forma=esfera
+[2026-03-10 22:12:38] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-03-10 22:12:38] [WARNING ] logica — ICP atingiu o limite de 50 iterações sem convergir
+[2026-03-10 22:12:38] [INFO    ] logica — ICP concluído — erro residual: 2.2821 mm
+[2026-03-10 22:12:38] [INFO    ] logica — Inspeção concluída — defeitos=1133 (23.0%) | dist_med=1.983 mm | dist_max=9.706 mm
+[2026-03-10 22:12:39] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[2026-03-10 22:12:46] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=nenhum forma=esfera
+[2026-03-10 22:12:46] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-03-10 22:12:46] [WARNING ] logica — ICP atingiu o limite de 50 iterações sem convergir
+[2026-03-10 22:12:46] [INFO    ] logica — ICP concluído — erro residual: 2.2713 mm
+[2026-03-10 22:12:46] [INFO    ] logica — Inspeção concluída — defeitos=1152 (23.4%) | dist_med=1.960 mm | dist_max=9.757 mm
+[2026-03-10 22:12:48] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[2026-03-10 22:13:15] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:13:15] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:13:15] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:13:15] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:13:25] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:13:25] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:13:25] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:13:25] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:13:29] [INFO    ] interface — Modo alterado para: Simulado
+[2026-03-10 22:13:32] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=nenhum forma=cilindro
+[2026-03-10 22:13:32] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-03-10 22:13:32] [WARNING ] logica — ICP atingiu o limite de 50 iterações sem convergir
+[2026-03-10 22:13:32] [INFO    ] logica — ICP concluído — erro residual: 0.3841 mm
+[2026-03-10 22:13:32] [INFO    ] logica — Inspeção concluída — defeitos=0 (0.0%) | dist_med=0.373 mm | dist_max=2.756 mm
+[2026-03-10 22:13:33] [INFO    ] interface — Resultado: ✅ PEÇA APROVADA
+[2026-03-10 22:14:09] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:14:09] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:14:09] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:14:09] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:14:18] [INFO    ] interface — Modo alterado para: Simulado
+[2026-03-10 22:14:19] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=nenhum forma=cilindro
+[2026-03-10 22:14:19] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-03-10 22:14:19] [WARNING ] logica — ICP atingiu o limite de 50 iterações sem convergir
+[2026-03-10 22:14:19] [INFO    ] logica — ICP concluído — erro residual: 0.3917 mm
+[2026-03-10 22:14:19] [INFO    ] logica — Inspeção concluída — defeitos=0 (0.0%) | dist_med=0.373 mm | dist_max=2.935 mm
+[2026-03-10 22:14:20] [INFO    ] interface — Resultado: ✅ PEÇA APROVADA
+[2026-03-10 22:15:04] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:15:04] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:15:04] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:15:04] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:15:09] [INFO    ] interface — Modo alterado para: Simulado
+[2026-03-10 22:15:10] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=nenhum forma=cilindro
+[2026-03-10 22:15:10] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-03-10 22:15:10] [INFO    ] logica — ICP concluído — erro residual: 0.3879 mm
+[2026-03-10 22:15:10] [INFO    ] logica — Inspeção concluída — defeitos=2 (0.0%) | dist_med=0.371 mm | dist_max=3.062 mm
+[2026-03-10 22:15:12] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[2026-03-10 22:15:14] [INFO    ] interface — Modo alterado para: Real
+[2026-03-10 22:15:17] [INFO    ] interface — Modo alterado para: Simulado
+[2026-03-10 22:15:18] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=nenhum forma=cilindro
+[2026-03-10 22:15:18] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-03-10 22:15:18] [INFO    ] logica — ICP concluído — erro residual: 0.3829 mm
+[2026-03-10 22:15:18] [INFO    ] logica — Inspeção concluída — defeitos=0 (0.0%) | dist_med=0.368 mm | dist_max=2.870 mm
+[2026-03-10 22:15:19] [INFO    ] interface — Resultado: ✅ PEÇA APROVADA
+[2026-03-10 22:17:30] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:17:30] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:17:30] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:17:30] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:17:33] [INFO    ] interface — Modo alterado para: Simulado
+[2026-03-10 22:17:35] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=nenhum forma=cilindro
+[2026-03-10 22:17:35] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-03-10 22:17:35] [WARNING ] logica — ICP atingiu o limite de 50 iterações sem convergir
+[2026-03-10 22:17:35] [INFO    ] logica — ICP concluído — erro residual: 0.3826 mm
+[2026-03-10 22:17:35] [INFO    ] logica — Inspeção concluída — defeitos=0 (0.0%) | dist_med=0.370 mm | dist_max=2.899 mm
+[2026-03-10 22:17:36] [INFO    ] interface — Resultado: ✅ PEÇA APROVADA
+[2026-03-10 22:19:44] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:19:44] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:19:44] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:19:44] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:19:46] [INFO    ] interface — Modo alterado para: Simulado
+[2026-03-10 22:19:47] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=nenhum forma=cilindro
+[2026-03-10 22:19:47] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-03-10 22:19:47] [INFO    ] logica — ICP concluído — erro residual: 0.3854 mm
+[2026-03-10 22:19:47] [INFO    ] logica — Inspeção concluída — defeitos=2 (0.0%) | dist_med=0.373 mm | dist_max=3.206 mm
+[2026-03-10 22:19:49] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[2026-03-10 22:19:59] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=nenhum forma=cilindro
+[2026-03-10 22:19:59] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-03-10 22:19:59] [WARNING ] logica — ICP atingiu o limite de 50 iterações sem convergir
+[2026-03-10 22:19:59] [INFO    ] logica — ICP concluído — erro residual: 0.3831 mm
+[2026-03-10 22:19:59] [INFO    ] logica — Inspeção concluída — defeitos=0 (0.0%) | dist_med=0.371 mm | dist_max=2.989 mm
+[2026-03-10 22:20:01] [INFO    ] interface — Resultado: ✅ PEÇA APROVADA
+[2026-03-10 22:23:31] [INFO    ] interface — Modo alterado para: Real
+[2026-03-10 22:23:32] [INFO    ] interface — Modo alterado para: Simulado
+[2026-03-10 22:23:33] [INFO    ] interface — Modo alterado para: Real
+[2026-03-10 22:23:33] [INFO    ] interface — Modo alterado para: Simulado
+[2026-03-10 22:26:13] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:26:13] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:26:13] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:26:13] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:26:20] [INFO    ] interface — Modo alterado para: Simulado
+[2026-03-10 22:26:26] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=nenhum forma=cilindro
+[2026-03-10 22:26:26] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-03-10 22:26:26] [INFO    ] logica — ICP concluído — erro residual: 0.3815 mm
+[2026-03-10 22:26:26] [INFO    ] logica — Inspeção concluída — defeitos=2 (0.0%) | dist_med=0.369 mm | dist_max=3.131 mm
+[2026-03-10 22:26:28] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[2026-03-10 22:26:59] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:26:59] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:26:59] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:26:59] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:27:01] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[2026-03-10 22:27:03] [WARNING ] serial_comm — Nenhuma porta serial detectada
+[2026-03-10 22:27:03] [ERROR   ] serial_comm — Porta do Arduino não encontrada. Verifique a conexão.
+[2026-03-10 22:27:05] [INFO    ] interface — Modo alterado para: Simulado
+[2026-03-10 22:36:07] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:36:07] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:36:07] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:36:07] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:36:08] [CRITICAL] __main__ — Falha crítica ao iniciar a aplicação: unsupported operand type(s) for +: 'int' and 'str'
+Traceback (most recent call last):
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\main.py", line 89, in main
+    Interface()
+    ~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 348, in __init__
+    self._criar_janela_principal()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 377, in _criar_janela_principal
+    self._criar_layout()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 393, in _criar_layout
+    self._criar_painel_direita(corpo)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 589, in _criar_painel_direita
+    self.viewer = Viewer3D(right)
+                  ~~~~~~~~^^^^^^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 106, in __init__
+    self.canvas = tk.Canvas(
+                  ~~~~~~~~~^
+        self, width=width, height=height,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        bg=BG, highlightthickness=0, cursor="fleur",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\__init__.py", line 2910, in __init__
+    Widget.__init__(self, master, 'canvas', cnf, kw)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\__init__.py", line 2788, in __init__
+    self._setup(master, cnf)
+    ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python314\Lib\tkinter\__init__.py", line 2776, in _setup
+    self._w = master._w + '.' + name
+              ~~~~~~~~~~^~~~~
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+[2026-03-10 22:38:26] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:38:26] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:38:26] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:38:26] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:38:26] [CRITICAL] __main__ — Falha crítica ao iniciar a aplicação: No module named 'numpy'
+Traceback (most recent call last):
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\main.py", line 88, in main
+    from interface import Interface
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 19, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+[2026-03-10 22:38:59] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:38:59] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:38:59] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:38:59] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:38:59] [CRITICAL] __main__ — Falha crítica ao iniciar a aplicação: No module named 'matplotlib'
+Traceback (most recent call last):
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\main.py", line 88, in main
+    from interface import Interface
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 20, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2026-03-10 22:39:42] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:39:42] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:39:42] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:39:42] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:39:42] [CRITICAL] __main__ — Falha crítica ao iniciar a aplicação: No module named 'scipy'
+Traceback (most recent call last):
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\main.py", line 88, in main
+    from interface import Interface
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 38, in <module>
+    import logica
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\logica.py", line 18, in <module>
+    from scipy.spatial import cKDTree, ConvexHull, Delaunay
+ModuleNotFoundError: No module named 'scipy'
+[2026-03-10 22:40:04] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:40:04] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:40:04] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:40:04] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:40:07] [CRITICAL] __main__ — Falha crítica ao iniciar a aplicação: unsupported operand type(s) for +: 'int' and 'str'
+Traceback (most recent call last):
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\main.py", line 89, in main
+    Interface()
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 348, in __init__
+    self._criar_janela_principal()
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 377, in _criar_janela_principal
+    self._criar_layout()
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 393, in _criar_layout
+    self._criar_painel_direita(corpo)
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 589, in _criar_painel_direita
+    self.viewer = Viewer3D(right)
+                  ^^^^^^^^^^^^^^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 106, in __init__
+    self.canvas = tk.Canvas(
+                  ^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 2763, in __init__
+    Widget.__init__(self, master, 'canvas', cnf, kw)
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 2641, in __init__
+    self._setup(master, cnf)
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 2629, in _setup
+    self._w = master._w + '.' + name
+              ~~~~~~~~~~^~~~~
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+[2026-03-10 22:41:16] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:41:16] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:41:16] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:41:16] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:41:17] [CRITICAL] __main__ — Falha crítica ao iniciar a aplicação: unsupported operand type(s) for +: 'int' and 'str'
+Traceback (most recent call last):
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\main.py", line 89, in main
+    Interface()
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 348, in __init__
+    self._criar_janela_principal()
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 377, in _criar_janela_principal
+    self._criar_layout()
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 393, in _criar_layout
+    self._criar_painel_direita(corpo)
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 589, in _criar_painel_direita
+    self.viewer = Viewer3D(right)
+                  ^^^^^^^^^^^^^^^
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 106, in __init__
+    self.canvas = tk.Canvas(
+                  ^^^^^^^^^^
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 2763, in __init__
+    Widget.__init__(self, master, 'canvas', cnf, kw)
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 2641, in __init__
+    self._setup(master, cnf)
+  File "C:\Users\yande\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 2629, in _setup
+    self._w = master._w + '.' + name
+              ~~~~~~~~~~^~~~~
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+[2026-03-10 22:41:37] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_2026_03_10.log (nível: INFO)
+[2026-03-10 22:41:37] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:41:37] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[2026-03-10 22:41:37] [INFO    ] __main__ — ============================================================
+[2026-03-10 22:41:40] [INFO    ] interface — Modo alterado para: Simulado
+[2026-03-10 22:41:41] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=nenhum forma=cilindro
+[2026-03-10 22:41:41] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[2026-03-10 22:41:41] [INFO    ] logica — ICP concluído — erro residual: 0.3817 mm
+[2026-03-10 22:41:41] [INFO    ] logica — Inspeção concluída — defeitos=2 (0.0%) | dist_med=0.372 mm | dist_max=3.089 mm
+[2026-03-10 22:41:42] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO

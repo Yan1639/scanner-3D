@@ -41,7 +41,7 @@ def configurar_logging() -> None:
 
     nivel = getattr(logging, Config.LOG_LEVEL, logging.INFO)
     fmt   = "[%(asctime)s] [%(levelname)-8s] %(name)s — %(message)s"
-    date  = "%Y-%m-%d %H:%M:%S"
+    date  = "%d-%m-%Y %H:%M:%S"
 
     # ── Handler de console ────────────────────────────────────────────────────
     console_handler = logging.StreamHandler(sys.stdout)
@@ -49,7 +49,7 @@ def configurar_logging() -> None:
     console_handler.setFormatter(logging.Formatter(fmt, datefmt=date))
 
     # ── Handler de arquivo rotativo (1 arquivo por dia, mantém 30 dias) ───────
-    data_str  = datetime.now().strftime("%Y_%m_%d")
+    data_str  = datetime.now().strftime("%d_%m_%Y")
     log_path  = os.path.join(Config.LOG_DIR, f"inspecao_{data_str}.log")
     file_handler = logging.handlers.TimedRotatingFileHandler(
         log_path,

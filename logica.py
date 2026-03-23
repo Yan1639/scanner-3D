@@ -36,8 +36,6 @@ logger = logging.getLogger(__name__)
 def _gerar_casca_cilindro(n_pontos: int, raio: float, altura: float) -> np.ndarray:
     """
     Gera N pontos na superfície de um cilindro (vetorizado com NumPy).
-
-    Complexidade: O(N) — sem loop Python, muito mais rápido para 100k+ pontos.
     """
     theta = np.random.uniform(0, 2 * np.pi, n_pontos)
     z     = np.random.uniform(-altura / 2, altura / 2, n_pontos)
@@ -49,10 +47,7 @@ def _gerar_casca_cilindro(n_pontos: int, raio: float, altura: float) -> np.ndarr
 def _gerar_casca_esfera(n_pontos: int, raio: float) -> np.ndarray:
     """
     Gera N pontos uniformes na superfície de uma esfera (vetorizado).
-
-    Usa amostragem por rejeição → distribuição uniforme garantida.
     """
-    # Método de Marsaglia: pontos uniformes em esfera unitária
     pts = []
     while len(pts) < n_pontos:
         u = np.random.uniform(-1, 1, (n_pontos * 2, 3))
@@ -320,17 +315,18 @@ def verificar_defeito(
     cores_ref   = ["red" if d > tol_mm else "blue" for d in dist_ref]
 
     resultado = {
-        "n_defeitos"  : n_defeitos,
-        "pct_defeito" : pct_defeito,
-        "dist_media"  : dist_media,
-        "dist_max"    : dist_max,
-        "dist_std"    : dist_std,
-        "cores_teste" : cores_teste,
-        "cores_ref"   : cores_ref,
-        "dist_teste"  : dist_teste,
-        "dist_ref"    : dist_ref,
-        "erro_icp"    : erro_icp,
-        "aprovada"    : n_defeitos == 0,
+        "n_defeitos"      : n_defeitos,
+        "pct_defeito"     : pct_defeito,
+        "dist_media"      : dist_media,
+        "dist_max"        : dist_max,
+        "dist_std"        : dist_std,
+        "cores_teste"     : cores_teste,
+        "cores_ref"       : cores_ref,
+        "dist_teste"      : dist_teste,
+        "dist_ref"        : dist_ref,
+        "erro_icp"        : erro_icp,
+        "aprovada"        : n_defeitos == 0,
+        "pontos_alinhados": pontos_teste,   # pontos após ICP — usados no heatmap
     }
 
     logger.info(

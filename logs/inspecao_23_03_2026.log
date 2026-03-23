@@ -1,0 +1,47 @@
+[23-03-2026 16:02:17] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_23_03_2026.log (nível: INFO)
+[23-03-2026 16:02:17] [INFO    ] __main__ — ============================================================
+[23-03-2026 16:02:17] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[23-03-2026 16:02:17] [INFO    ] __main__ — ============================================================
+[23-03-2026 16:02:28] [INFO    ] interface — Modo alterado para: Simulado
+[23-03-2026 16:02:34] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=furo superior forma=cilindro
+[23-03-2026 16:02:34] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[23-03-2026 16:02:34] [INFO    ] logica — ICP concluído — erro residual: 0.3735 mm
+[23-03-2026 16:02:34] [INFO    ] logica — Inspeção concluída — defeitos=1 (0.0%) | dist_med=0.365 mm | dist_max=3.040 mm
+[23-03-2026 16:02:36] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[23-03-2026 16:03:04] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=furo lateral forma=cilindro
+[23-03-2026 16:03:04] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[23-03-2026 16:03:04] [INFO    ] logica — ICP concluído — erro residual: 0.3541 mm
+[23-03-2026 16:03:04] [INFO    ] logica — Inspeção concluída — defeitos=0 (0.0%) | dist_med=0.355 mm | dist_max=1.239 mm
+[23-03-2026 16:03:06] [INFO    ] interface — Resultado: ✅ PEÇA APROVADA
+[23-03-2026 16:03:16] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=2.0 defeito=furo lateral forma=cilindro
+[23-03-2026 16:03:16] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[23-03-2026 16:03:16] [INFO    ] logica — ICP concluído — erro residual: 0.3624 mm
+[23-03-2026 16:03:16] [INFO    ] logica — Inspeção concluída — defeitos=0 (0.0%) | dist_med=0.358 mm | dist_max=1.362 mm
+[23-03-2026 16:03:18] [INFO    ] interface — Resultado: ✅ PEÇA APROVADA
+[23-03-2026 16:03:31] [INFO    ] interface — EXECUTAR — ref=True sim=True tol=2.0 defeito=furo lateral forma=cilindro
+[23-03-2026 16:03:31] [INFO    ] logica — XYZ salvo: modelo_ok.xyz (2435 pontos)
+[23-03-2026 16:03:32] [INFO    ] interface — Referência salva — 2435 pontos
+[23-03-2026 16:03:36] [INFO    ] interface — EXECUTAR — ref=True sim=True tol=2.0 defeito=nenhum forma=cilindro
+[23-03-2026 16:03:36] [INFO    ] logica — XYZ salvo: modelo_ok.xyz (2500 pontos)
+[23-03-2026 16:03:37] [INFO    ] interface — Referência salva — 2500 pontos
+[23-03-2026 16:03:41] [INFO    ] interface — EXECUTAR — ref=True sim=True tol=2.0 defeito=furo lateral forma=cilindro
+[23-03-2026 16:03:41] [INFO    ] logica — XYZ salvo: modelo_ok.xyz (2428 pontos)
+[23-03-2026 16:03:42] [INFO    ] interface — Referência salva — 2428 pontos
+[23-03-2026 16:03:46] [INFO    ] interface — EXECUTAR — ref=True sim=True tol=2.0 defeito=nenhum forma=cilindro
+[23-03-2026 16:03:46] [INFO    ] logica — XYZ salvo: modelo_ok.xyz (2500 pontos)
+[23-03-2026 16:03:47] [INFO    ] interface — Referência salva — 2500 pontos
+[23-03-2026 16:03:52] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=2.0 defeito=furo lateral forma=cilindro
+[23-03-2026 16:03:52] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[23-03-2026 16:03:52] [INFO    ] logica — ICP concluído — erro residual: 0.3566 mm
+[23-03-2026 16:03:52] [INFO    ] logica — Inspeção concluída — defeitos=8 (0.2%) | dist_med=0.373 mm | dist_max=2.829 mm
+[23-03-2026 16:03:54] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[23-03-2026 16:04:05] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=furo lateral forma=cilindro
+[23-03-2026 16:04:05] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[23-03-2026 16:04:05] [INFO    ] logica — ICP concluído — erro residual: 0.3524 mm
+[23-03-2026 16:04:05] [INFO    ] logica — Inspeção concluída — defeitos=0 (0.0%) | dist_med=0.368 mm | dist_max=2.815 mm
+[23-03-2026 16:04:06] [INFO    ] interface — Resultado: ✅ PEÇA APROVADA
+[23-03-2026 16:04:13] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=furo lateral forma=cilindro
+[23-03-2026 16:04:13] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[23-03-2026 16:04:13] [INFO    ] logica — ICP concluído — erro residual: 0.3531 mm
+[23-03-2026 16:04:13] [INFO    ] logica — Inspeção concluída — defeitos=1 (0.0%) | dist_med=0.368 mm | dist_max=3.193 mm
+[23-03-2026 16:04:15] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
