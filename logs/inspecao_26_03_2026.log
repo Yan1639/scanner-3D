@@ -1,0 +1,108 @@
+[26-03-2026 13:42:20] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_26_03_2026.log (nível: INFO)
+[26-03-2026 13:42:20] [INFO    ] __main__ — ============================================================
+[26-03-2026 13:42:20] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[26-03-2026 13:42:20] [INFO    ] __main__ — ============================================================
+[26-03-2026 13:42:22] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[26-03-2026 13:42:23] [WARNING ] serial_comm — Múltiplas portas encontradas, nenhuma identificada como Arduino: ['COM5', 'COM4']
+[26-03-2026 13:42:23] [ERROR   ] serial_comm — Porta do Arduino não encontrada. Verifique a conexão.
+[26-03-2026 13:43:28] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_26_03_2026.log (nível: INFO)
+[26-03-2026 13:43:28] [INFO    ] __main__ — ============================================================
+[26-03-2026 13:43:28] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[26-03-2026 13:43:28] [INFO    ] __main__ — ============================================================
+[26-03-2026 13:43:32] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 13:43:32] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 13:43:33] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[26-03-2026 13:43:34] [WARNING ] serial_comm — Múltiplas portas encontradas, nenhuma identificada como Arduino: ['COM5', 'COM4']
+[26-03-2026 13:43:34] [ERROR   ] serial_comm — Porta do Arduino não encontrada. Verifique a conexão.
+[26-03-2026 14:06:07] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_26_03_2026.log (nível: INFO)
+[26-03-2026 14:06:07] [INFO    ] __main__ — ============================================================
+[26-03-2026 14:06:07] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[26-03-2026 14:06:07] [INFO    ] __main__ — ============================================================
+[26-03-2026 14:06:12] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 14:06:13] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 14:06:21] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 14:06:36] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=nenhum forma=esfera
+[26-03-2026 14:06:36] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[26-03-2026 14:06:36] [WARNING ] logica — ICP atingiu o limite de 50 iterações sem convergir
+[26-03-2026 14:06:36] [INFO    ] logica — ICP concluído — erro residual: 0.3812 mm
+[26-03-2026 14:06:36] [INFO    ] logica — Inspeção concluída — defeitos=0 (0.0%) | dist_med=0.367 mm | dist_max=2.733 mm
+[26-03-2026 14:06:37] [INFO    ] interface — Resultado: ✅ PEÇA APROVADA
+[26-03-2026 14:06:43] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=furo lateral forma=esfera
+[26-03-2026 14:06:43] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[26-03-2026 14:06:43] [INFO    ] logica — ICP concluído — erro residual: 0.3542 mm
+[26-03-2026 14:06:43] [INFO    ] logica — Inspeção concluída — defeitos=0 (0.0%) | dist_med=0.352 mm | dist_max=1.090 mm
+[26-03-2026 14:06:44] [INFO    ] interface — Resultado: ✅ PEÇA APROVADA
+[26-03-2026 14:06:48] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=amassado forma=esfera
+[26-03-2026 14:06:48] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[26-03-2026 14:06:48] [INFO    ] logica — ICP concluído — erro residual: 1.6214 mm
+[26-03-2026 14:06:48] [INFO    ] logica — Inspeção concluída — defeitos=1278 (26.0%) | dist_med=1.933 mm | dist_max=5.069 mm
+[26-03-2026 14:06:49] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[26-03-2026 14:07:11] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=esticado forma=esfera
+[26-03-2026 14:07:11] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[26-03-2026 14:07:11] [INFO    ] logica — ICP concluído — erro residual: 1.8873 mm
+[26-03-2026 14:07:11] [INFO    ] logica — Inspeção concluída — defeitos=910 (18.5%) | dist_med=1.642 mm | dist_max=5.151 mm
+[26-03-2026 14:07:12] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[26-03-2026 14:07:18] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=esticado forma=esfera
+[26-03-2026 14:07:18] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[26-03-2026 14:07:18] [INFO    ] logica — ICP concluído — erro residual: 1.9671 mm
+[26-03-2026 14:07:18] [INFO    ] logica — Inspeção concluída — defeitos=980 (20.0%) | dist_med=1.683 mm | dist_max=5.121 mm
+[26-03-2026 14:07:19] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[26-03-2026 14:08:15] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=esticado forma=esfera
+[26-03-2026 14:08:15] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[26-03-2026 14:08:15] [INFO    ] logica — ICP concluído — erro residual: 1.9054 mm
+[26-03-2026 14:08:15] [INFO    ] logica — Inspeção concluída — defeitos=928 (18.9%) | dist_med=1.647 mm | dist_max=5.043 mm
+[26-03-2026 14:08:16] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[26-03-2026 14:14:23] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 14:14:24] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 14:15:04] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 14:15:19] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 14:15:20] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 14:15:31] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_26_03_2026.log (nível: INFO)
+[26-03-2026 14:15:31] [INFO    ] __main__ — ============================================================
+[26-03-2026 14:15:31] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[26-03-2026 14:15:31] [INFO    ] __main__ — ============================================================
+[26-03-2026 14:15:33] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 14:15:34] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 14:15:35] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 14:15:35] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 14:15:36] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 14:15:36] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 14:15:42] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 14:17:04] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 14:17:19] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 14:17:24] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=amassado forma=cilindro
+[26-03-2026 14:17:24] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[26-03-2026 14:17:24] [WARNING ] logica — ICP atingiu o limite de 50 iterações sem convergir
+[26-03-2026 14:17:24] [INFO    ] logica — ICP concluído — erro residual: 0.6469 mm
+[26-03-2026 14:17:24] [INFO    ] logica — Inspeção concluída — defeitos=858 (17.5%) | dist_med=1.646 mm | dist_max=10.900 mm
+[26-03-2026 14:17:27] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[26-03-2026 15:08:38] [INFO    ] interface — EXECUTAR — ref=True sim=True tol=3.0 defeito=amassado forma=cilindro
+[26-03-2026 15:08:38] [INFO    ] logica — XYZ salvo: modelo_ok.xyz (2500 pontos)
+[26-03-2026 15:08:40] [INFO    ] interface — Referência salva — 2500 pontos
+[26-03-2026 15:08:43] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=amassado forma=cilindro
+[26-03-2026 15:08:43] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[26-03-2026 15:08:43] [INFO    ] logica — ICP concluído — erro residual: 0.2531 mm
+[26-03-2026 15:08:43] [INFO    ] logica — Inspeção concluída — defeitos=0 (0.0%) | dist_med=0.253 mm | dist_max=0.940 mm
+[26-03-2026 15:08:44] [INFO    ] interface — Resultado: ✅ PEÇA APROVADA
+[26-03-2026 15:09:12] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 15:09:12] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 15:09:13] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 15:09:13] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 15:09:14] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 15:09:14] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 15:09:14] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 15:09:15] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 15:09:15] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 15:09:15] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 15:09:15] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 15:09:15] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 15:09:15] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 15:09:16] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 15:09:16] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 15:09:16] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 15:09:17] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 15:09:17] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 15:09:18] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 15:09:18] [INFO    ] interface — Modo alterado para: Simulado
+[26-03-2026 15:09:19] [INFO    ] interface — Modo alterado para: Real
+[26-03-2026 15:09:19] [INFO    ] interface — Modo alterado para: Simulado

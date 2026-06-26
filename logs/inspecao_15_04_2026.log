@@ -1,0 +1,11 @@
+[15-04-2026 15:03:33] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_15_04_2026.log (nível: INFO)
+[15-04-2026 15:03:33] [INFO    ] __main__ — ============================================================
+[15-04-2026 15:03:33] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[15-04-2026 15:03:33] [INFO    ] __main__ — ============================================================
+[15-04-2026 15:03:48] [INFO    ] interface — Modo alterado para: Simulado
+[15-04-2026 15:03:48] [INFO    ] interface — Modo alterado para: Real
+[15-04-2026 15:03:49] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[15-04-2026 15:03:50] [WARNING ] serial_comm — Múltiplas portas encontradas, nenhuma identificada como Arduino: ['COM3', 'COM4']
+[15-04-2026 15:03:50] [WARNING ] serial_comm — Múltiplas portas encontradas, nenhuma identificada como Arduino: ['COM3', 'COM4']
+[15-04-2026 15:03:50] [ERROR   ] serial_comm — Porta do Arduino não encontrada. Verifique a conexão.
+[15-04-2026 15:03:50] [ERROR   ] serial_comm — Porta do Arduino não encontrada. Verifique a conexão.

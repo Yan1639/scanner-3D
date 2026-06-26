@@ -1,0 +1,202 @@
+[07-05-2026 13:45:30] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_07_05_2026.log (nível: INFO)
+[07-05-2026 13:45:30] [INFO    ] __main__ — ============================================================
+[07-05-2026 13:45:30] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[07-05-2026 13:45:30] [INFO    ] __main__ — ============================================================
+[07-05-2026 13:47:02] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[07-05-2026 13:47:03] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[07-05-2026 13:47:03] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[07-05-2026 13:47:05] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[07-05-2026 13:48:38] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:38] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:38] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:39] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:39] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:39] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:39] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:40] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:40] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:40] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:40] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:41] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:41] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:41] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:41] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:42] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:42] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:42] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:42] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:42] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:43] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:43] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:43] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:43] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:44] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:44] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:44] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:44] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:45] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:45] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:45] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:45] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:46] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:46] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:46] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:46] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:46] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:47] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:47] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:47] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:47] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:48] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:48] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:48] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:48] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:49] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:49] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:49] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:49] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:49] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:50] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:50] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:50] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:50] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:51] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:51] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:51] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:51] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:52] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:52] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:52] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:52] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:53] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:53] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:53] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:53] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:53] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:54] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:54] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:54] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:54] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:55] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:48:55] [WARNING ] serial_comm — Falha ao salvar ponto na planilha: File is not a zip file
+[07-05-2026 13:51:56] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_07_05_2026.log (nível: INFO)
+[07-05-2026 13:51:56] [INFO    ] __main__ — ============================================================
+[07-05-2026 13:51:56] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[07-05-2026 13:51:56] [INFO    ] __main__ — ============================================================
+[07-05-2026 13:52:08] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[07-05-2026 13:52:10] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[07-05-2026 13:52:10] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[07-05-2026 13:52:12] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[07-05-2026 13:52:37] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[07-05-2026 13:52:40] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[07-05-2026 13:52:40] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[07-05-2026 13:52:40] [ERROR   ] serial_comm — Erro na porta COM6: could not open port 'COM6': PermissionError(13, 'Acesso negado.', None, 5)
+[07-05-2026 13:52:45] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_07_05_2026.log (nível: INFO)
+[07-05-2026 13:52:45] [INFO    ] __main__ — ============================================================
+[07-05-2026 13:52:45] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[07-05-2026 13:52:45] [INFO    ] __main__ — ============================================================
+[07-05-2026 13:52:49] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[07-05-2026 13:52:50] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[07-05-2026 13:52:50] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[07-05-2026 13:52:52] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[07-05-2026 13:53:27] [ERROR   ] serial_comm — Erro na porta COM6: GetOverlappedResult failed (PermissionError(13, 'Acesso negado.', None, 5))
+[07-05-2026 14:03:58] [INFO    ] interface — Modo alterado para: Simulado
+[07-05-2026 14:04:01] [INFO    ] interface — Modo alterado para: Real
+[07-05-2026 14:04:06] [INFO    ] interface — Modo alterado para: Simulado
+[07-05-2026 14:04:06] [INFO    ] interface — Modo alterado para: Real
+[07-05-2026 14:04:07] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[07-05-2026 14:04:08] [WARNING ] serial_comm — Nenhuma porta serial detectada
+[07-05-2026 14:04:08] [ERROR   ] serial_comm — Porta do Arduino não encontrada. Verifique a conexão.
+[07-05-2026 14:04:17] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[07-05-2026 14:04:18] [INFO    ] serial_comm — Arduino detectado em COM7 (USB-SERIAL CH340 (COM7))
+[07-05-2026 14:04:18] [INFO    ] serial_comm — Conectando em COM7 @ 9600 baud…
+[07-05-2026 14:04:20] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[07-05-2026 14:04:38] [ERROR   ] serial_comm — Erro na porta COM7: GetOverlappedResult failed (PermissionError(13, 'Acesso negado.', None, 5))
+[07-05-2026 14:16:57] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_07_05_2026.log (nível: INFO)
+[07-05-2026 14:16:57] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:16:57] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[07-05-2026 14:16:57] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:18:25] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_07_05_2026.log (nível: INFO)
+[07-05-2026 14:18:25] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:18:25] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[07-05-2026 14:18:25] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:21:52] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_07_05_2026.log (nível: INFO)
+[07-05-2026 14:21:52] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:21:52] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[07-05-2026 14:21:52] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:21:58] [INFO    ] interface — Modo alterado para: Simulado
+[07-05-2026 14:21:59] [INFO    ] interface — Modo alterado para: Real
+[07-05-2026 14:22:00] [INFO    ] interface — Modo alterado para: Simulado
+[07-05-2026 14:22:00] [INFO    ] interface — Modo alterado para: Real
+[07-05-2026 14:24:05] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_07_05_2026.log (nível: INFO)
+[07-05-2026 14:24:05] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:24:05] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[07-05-2026 14:24:05] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:35:48] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_07_05_2026.log (nível: INFO)
+[07-05-2026 14:35:48] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:35:48] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[07-05-2026 14:35:48] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:35:55] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_07_05_2026.log (nível: INFO)
+[07-05-2026 14:35:55] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:35:55] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[07-05-2026 14:35:55] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:36:07] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[07-05-2026 14:36:08] [WARNING ] serial_comm — Nenhuma porta serial detectada
+[07-05-2026 14:36:08] [ERROR   ] serial_comm — Porta do Arduino não encontrada. Verifique a conexão.
+[07-05-2026 14:46:51] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_07_05_2026.log (nível: INFO)
+[07-05-2026 14:46:51] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:46:51] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[07-05-2026 14:46:51] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:46:55] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[07-05-2026 14:46:56] [WARNING ] serial_comm — Nenhuma porta serial detectada
+[07-05-2026 14:46:56] [ERROR   ] serial_comm — Porta do Arduino não encontrada. Verifique a conexão.
+[07-05-2026 14:46:58] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[07-05-2026 14:46:59] [WARNING ] serial_comm — Nenhuma porta serial detectada
+[07-05-2026 14:46:59] [ERROR   ] serial_comm — Porta do Arduino não encontrada. Verifique a conexão.
+[07-05-2026 14:50:19] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_07_05_2026.log (nível: INFO)
+[07-05-2026 14:50:19] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:50:19] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[07-05-2026 14:50:19] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:50:22] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[07-05-2026 14:50:24] [WARNING ] serial_comm — Nenhuma porta serial detectada
+[07-05-2026 14:50:24] [ERROR   ] serial_comm — Porta do Arduino não encontrada. Verifique a conexão.
+[07-05-2026 14:50:30] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[07-05-2026 14:50:31] [WARNING ] serial_comm — Nenhuma porta serial detectada
+[07-05-2026 14:50:31] [ERROR   ] serial_comm — Porta do Arduino não encontrada. Verifique a conexão.
+[07-05-2026 14:51:05] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_07_05_2026.log (nível: INFO)
+[07-05-2026 14:51:05] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:51:05] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[07-05-2026 14:51:05] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:53:43] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_07_05_2026.log (nível: INFO)
+[07-05-2026 14:53:43] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:53:43] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[07-05-2026 14:53:43] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:53:47] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[07-05-2026 14:53:48] [WARNING ] serial_comm — Nenhuma porta serial detectada
+[07-05-2026 14:53:48] [ERROR   ] serial_comm — Porta do Arduino não encontrada. Verifique a conexão.
+[07-05-2026 14:58:26] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_07_05_2026.log (nível: INFO)
+[07-05-2026 14:58:26] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:58:26] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[07-05-2026 14:58:26] [INFO    ] __main__ — ============================================================
+[07-05-2026 14:58:29] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[07-05-2026 14:58:30] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[07-05-2026 14:58:30] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[07-05-2026 14:58:32] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[07-05-2026 15:03:46] [ERROR   ] serial_comm — Erro na porta COM6: ClearCommError failed (PermissionError(13, 'Acesso negado.', None, 5))
+[07-05-2026 15:13:04] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_07_05_2026.log (nível: INFO)
+[07-05-2026 15:13:04] [INFO    ] __main__ — ============================================================
+[07-05-2026 15:13:04] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[07-05-2026 15:13:04] [INFO    ] __main__ — ============================================================
+[07-05-2026 15:13:08] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[07-05-2026 15:13:09] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[07-05-2026 15:13:09] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[07-05-2026 15:13:11] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[07-05-2026 15:14:34] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_07_05_2026.log (nível: INFO)
+[07-05-2026 15:14:34] [INFO    ] __main__ — ============================================================
+[07-05-2026 15:14:34] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[07-05-2026 15:14:34] [INFO    ] __main__ — ============================================================
+[07-05-2026 15:14:40] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[07-05-2026 15:14:41] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[07-05-2026 15:14:41] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[07-05-2026 15:14:43] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[07-05-2026 15:24:32] [ERROR   ] serial_comm — Erro na porta COM6: GetOverlappedResult failed (PermissionError(13, 'Acesso negado.', None, 5))

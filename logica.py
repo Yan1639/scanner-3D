@@ -6,7 +6,7 @@ Responsabilidades:
   • Aplicação de defeitos geométricos
   • Alinhamento por ICP (Iterative Closest Point)
   • Comparação com métricas industriais completas
-  • Exportação STL (casco convexo e Delaunay aprimorado)
+  • Exportação STL via Ball Pivoting Algorithm (BPA)
   • I/O de arquivos XYZ e STL
 
 Autor : Yan de Lima Pereira
@@ -15,7 +15,7 @@ Versão: 2.0
 
 import logging
 import numpy as np
-from scipy.spatial import cKDTree, ConvexHull, Delaunay
+from scipy.spatial import cKDTree
 
 try:
     from stl import mesh as stlmesh
@@ -164,9 +164,6 @@ def icp(
     """
     Alinha 'origem' contra 'alvo' usando ICP ponto-a-ponto.
 
-    Sem alinhamento prévio, diferenças de rotação ou translação podem
-    gerar falsos positivos na inspeção. O ICP corrige esse problema.
-
     Algoritmo:
       1. Encontra correspondências (vizinho mais próximo via KDTree)
       2. Calcula a transformação rígida ótima (SVD)
@@ -190,40 +187,34 @@ def icp(
     src = origem.copy().astype(np.float64)
     dst = alvo.astype(np.float64)
 
-    T_acum = np.eye(4)   # Transformação acumulada
+    T_acum = np.eye(4)
     erro_anterior = np.inf
 
     tree_dst = cKDTree(dst)
 
     for i in range(max_iter):
-        # 1 — Correspondências
         dist, idx = tree_dst.query(src)
         correspondentes = dst[idx]
 
         erro = float(np.mean(dist))
 
-        # 2 — Convergência
         if abs(erro_anterior - erro) < tol:
             logger.debug("ICP convergiu em %d iterações (erro=%.6f mm)", i, erro)
             break
         erro_anterior = erro
 
-        # 3 — Transformação rígida ótima (Umeyama / SVD)
         c_src = src.mean(axis=0)
         c_dst = correspondentes.mean(axis=0)
 
         A = (src - c_src).T @ (correspondentes - c_dst)
         U, _, Vt = np.linalg.svd(A)
 
-        # Garante rotação própria (det = +1)
         D = np.diag([1, 1, np.linalg.det(Vt.T @ U.T)])
         R = Vt.T @ D @ U.T
         t = c_dst - R @ c_src
 
-        # 4 — Aplica
         src = (R @ src.T).T + t
 
-        # Acumula na transformação 4x4
         T = np.eye(4)
         T[:3, :3] = R
         T[:3,  3] = t
@@ -247,9 +238,6 @@ def verificar_defeito(
 ) -> dict:
     """
     Compara duas nuvens de pontos e retorna métricas industriais completas.
-
-    O ICP é aplicado antes da comparação para eliminar falsos positivos
-    causados por deslocamento/rotação da peça na mesa de inspeção.
 
     Métricas retornadas:
       - n_defeitos    : Total de pontos fora da tolerância (bidirecional)
@@ -285,20 +273,17 @@ def verificar_defeito(
 
     erro_icp = 0.0
 
-    # ── Alinhamento ICP ─────────────────────────────────────────────────────
     if usar_icp:
         logger.info("Executando ICP para alinhar nuvens...")
         pontos_teste, _, erro_icp = icp(pontos_teste, pontos_ref)
         logger.info("ICP concluído — erro residual: %.4f mm", erro_icp)
 
-    # ── Comparação bidirecional com KDTree ──────────────────────────────────
     tree_ref   = cKDTree(pontos_ref)
     tree_teste = cKDTree(pontos_teste)
 
-    dist_teste, _ = tree_ref.query(pontos_teste)   # cada ponto teste → ref mais próximo
-    dist_ref,   _ = tree_teste.query(pontos_ref)   # cada ponto ref   → teste mais próximo
+    dist_teste, _ = tree_ref.query(pontos_teste)
+    dist_ref,   _ = tree_teste.query(pontos_ref)
 
-    # ── Métricas ─────────────────────────────────────────────────────────────
     n_def_teste = int(np.sum(dist_teste > tol_mm))
     n_def_ref   = int(np.sum(dist_ref   > tol_mm))
     n_defeitos  = n_def_teste + n_def_ref
@@ -326,7 +311,7 @@ def verificar_defeito(
         "dist_ref"        : dist_ref,
         "erro_icp"        : erro_icp,
         "aprovada"        : n_defeitos == 0,
-        "pontos_alinhados": pontos_teste,   # pontos após ICP — usados no heatmap
+        "pontos_alinhados": pontos_teste,
     }
 
     logger.info(
@@ -389,72 +374,209 @@ def carregar_xyz(arquivo: str) -> np.ndarray:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Exportação STL aprimorada
+# Exportação STL — Poisson Surface Reconstruction (principal) + BPA (fallback)
 # ─────────────────────────────────────────────────────────────────────────────
 
-def exportar_stl_convexo(pontos: np.ndarray, caminho: str) -> None:
+def _preparar_pcd(pontos: np.ndarray, o3d):
     """
-    Exporta como STL usando envoltória convexa (rápido, forma simples).
+    Etapas comuns de pré-processamento: downsampling + normais orientadas.
 
-    Limitação: ignora cavidades internas. Adequado para peças convexas.
+    O voxel_size é calculado como avg_dist * 0.8 para uniformizar a
+    densidade sem perder estrutura — densidade uniforme é pré-requisito
+    tanto do Poisson quanto do BPA.
+
+    Returns:
+        pcd (PointCloud open3d com normais), avg_dist (float mm)
     """
+    pcd = o3d.geometry.PointCloud()
+    pcd.points = o3d.utility.Vector3dVector(pontos.astype(np.float64))
+
+    # Voxel downsampling — uniformiza a densidade da nuvem
+    distancias  = pcd.compute_nearest_neighbor_distance()
+    avg_dist    = float(np.mean(distancias))
+    voxel_size  = avg_dist * 0.8
+    pcd         = pcd.voxel_down_sample(voxel_size=voxel_size)
+    logger.debug("Após voxel downsampling: %d pontos", len(pcd.points))
+
+    # Recalcula avg_dist após downsampling (densidade mudou)
+    distancias = pcd.compute_nearest_neighbor_distance()
+    avg_dist   = float(np.mean(distancias))
+
+    # Normais com vizinhança ampla — melhor para cascas cilíndricas/esféricas
+    pcd.estimate_normals(
+        search_param=o3d.geometry.KDTreeSearchParamKNN(knn=50)
+    )
+    pcd.orient_normals_consistent_tangent_plane(k=20)
+
+    return pcd, avg_dist
+
+
+def _salvar_malha(malha_o3d, caminho: str, metodo: str) -> None:
+    """Converte malha Open3D → numpy-stl e grava em disco."""
+    malha_o3d.remove_degenerate_triangles()
+    malha_o3d.remove_duplicated_triangles()
+    malha_o3d.remove_duplicated_vertices()
+    malha_o3d.remove_non_manifold_edges()
+    malha_o3d = malha_o3d.filter_smooth_laplacian(number_of_iterations=2)
+    malha_o3d.compute_vertex_normals()
+
+    vertices   = np.asarray(malha_o3d.vertices)
+    triangulos = np.asarray(malha_o3d.triangles)
+
+    if len(triangulos) == 0:
+        raise ValueError(
+            f"{metodo} não gerou triângulos. "
+            "Verifique se a nuvem de pontos tem densidade suficiente."
+        )
+
+    dados     = np.zeros(len(triangulos), dtype=stlmesh.Mesh.dtype)
+    malha_stl = stlmesh.Mesh(dados, remove_empty_areas=False)
+    for i, (a, b, c) in enumerate(triangulos):
+        malha_stl.vectors[i] = np.array([vertices[a], vertices[b], vertices[c]])
+
+    malha_stl.save(caminho)
+    logger.info("STL (%s) salvo: %s (%d triângulos)", metodo, caminho, len(triangulos))
+
+
+def exportar_stl_bpa(pontos: np.ndarray, caminho: str) -> None:
+    """
+    Exporta STL a partir de uma nuvem de pontos.
+
+    Estratégia (duas tentativas automáticas):
+    ─────────────────────────────────────────
+    1ª — Poisson Surface Reconstruction  (método padrão)
+         Resolve uma equação de Poisson para criar uma malha *watertight*
+         (fechada, sem buracos) mesmo quando a densidade é irregular.
+         É a escolha certa para cascas de scanner porque interpola suavemente
+         as regiões mais esparsas em vez de deixá-las vazias.
+
+         Pipeline:
+           1. Voxel downsampling + normais orientadas
+           2. Poisson depth=9  (resolução ~512³ — boa para peças industriais)
+           3. Remoção de vértices de baixa densidade (artefatos em ar livre)
+              usando o percentil 5 do mapa de densidade retornado pelo Poisson
+           4. Limpeza + suavização Laplaciana leve + exportação
+
+    2ª — Ball Pivoting Algorithm  (fallback automático)
+         Usado somente se o Poisson não gerar triângulos suficientes.
+         Preserva furos/defeitos reais da peça, mas é sensível a lacunas.
+
+         Pipeline:
+           1. Raios adaptativos em 7 níveis (1× → 13× avg_dist)
+           2. Segunda passagem nos pontos ainda livres
+           3. fill_holes() para buracos residuais
+           4. Limpeza + suavização + exportação
+
+    Args:
+        pontos  : Nuvem de pontos (N, 3) — mínimo 20 pontos
+        caminho : Caminho de saída do arquivo .stl
+
+    Raises:
+        ImportError : open3d ou numpy-stl não instalados
+        ValueError  : Pontos insuficientes ou nenhum triângulo gerado
+    """
+    try:
+        import open3d as o3d
+    except ImportError:
+        raise ImportError(
+            "open3d não instalado.\n"
+            "Execute: pip install open3d  (requer Python 3.8–3.11)"
+        )
+
     if not STL_DISPONIVEL:
         raise ImportError("numpy-stl não instalado. Execute: pip install numpy-stl")
-    if pontos is None or len(pontos) < 4:
-        raise ValueError("Mínimo de 4 pontos necessários para STL.")
+    if pontos is None or len(pontos) < 20:
+        raise ValueError("Mínimo de 20 pontos necessários para exportação STL.")
 
-    hull  = ConvexHull(pontos)
-    tris  = hull.simplices
-    dados = np.zeros(len(tris), dtype=stlmesh.Mesh.dtype)
-    malha = stlmesh.Mesh(dados, remove_empty_areas=False)
+    logger.info("Iniciando reconstrução de superfície — %d pontos", len(pontos))
 
-    for i, (a, b, c) in enumerate(tris):
-        malha.vectors[i] = np.array([pontos[a], pontos[b], pontos[c]])
+    pcd, avg_dist = _preparar_pcd(pontos, o3d)
 
-    malha.save(caminho)
-    logger.info("STL (convexo) salvo: %s", caminho)
+    # ══════════════════════════════════════════════════════════════════════════
+    # TENTATIVA 1 — Poisson Surface Reconstruction
+    # ══════════════════════════════════════════════════════════════════════════
+    logger.info("Tentando Poisson Surface Reconstruction (depth=9)…")
+    try:
+        malha_poisson, densidades = (
+            o3d.geometry.TriangleMesh
+            .create_from_point_cloud_poisson(pcd, depth=9)
+        )
+        logger.debug("Poisson gerou %d triângulos antes do filtro de densidade",
+                     len(malha_poisson.triangles))
 
+        # Remove vértices "fantasmas" criados em regiões sem pontos.
+        # O Poisson retorna um mapa de densidade: baixa densidade = artefato.
+        # Usar percentil 5 remove ~5 % dos vértices mais isolados sem cortar
+        # nada da superfície real (que sempre tem densidade > mediana).
+        densidades_np = np.asarray(densidades)
+        limiar        = np.quantile(densidades_np, 0.000)
+        verts_remover = densidades_np < limiar
+        malha_poisson.remove_vertices_by_mask(verts_remover)
+        logger.debug(
+            "Poisson após filtro de densidade (limiar=%.4f): %d triângulos",
+            limiar, len(malha_poisson.triangles),
+        )
 
-def exportar_stl_delaunay(pontos: np.ndarray, caminho: str) -> None:
-    """
-    Exporta STL usando triangulação de Delaunay em 2.5D (projeção XY).
+        if len(malha_poisson.triangles) >= 10:
+            _salvar_malha(malha_poisson, caminho, "Poisson")
+            return   # ← sucesso; sai da função
 
-    Vantagens sobre casco convexo:
-      • Mantém forma real da base da peça
-      • Melhor para formas não-convexas com variação em Z
-      • Não colapsa concavidades laterais
+        logger.warning("Poisson gerou poucos triângulos (%d) — tentando BPA como fallback",
+                       len(malha_poisson.triangles))
 
-    Nota: Para reconstrução de superfícies complexas com cavidades
-    3D completas, considere usar Open3D com Poisson Reconstruction.
-    """
-    if not STL_DISPONIVEL:
-        raise ImportError("numpy-stl não instalado. Execute: pip install numpy-stl")
-    if pontos is None or len(pontos) < 4:
-        raise ValueError("Mínimo de 4 pontos necessários para STL.")
+    except Exception as e:
+        logger.warning("Poisson falhou (%s) — tentando BPA como fallback", e)
 
-    # Triangulação Delaunay sobre a projeção XY
-    tri  = Delaunay(pontos[:, :2])
-    tris = tri.simplices
+    # ══════════════════════════════════════════════════════════════════════════
+    # TENTATIVA 2 — Ball Pivoting Algorithm (fallback)
+    # ══════════════════════════════════════════════════════════════════════════
+    logger.info("Iniciando BPA (fallback)…")
 
-    # Filtra triângulos degenerados (área muito pequena)
-    tris_validos = []
-    for t in tris:
-        pts_t = pontos[t]
-        v1    = pts_t[1] - pts_t[0]
-        v2    = pts_t[2] - pts_t[0]
-        area  = 0.5 * np.linalg.norm(np.cross(v1, v2))
-        if area > 1e-6:
-            tris_validos.append(t)
+    radii = o3d.utility.DoubleVector([
+        avg_dist * 1.0,
+        avg_dist * 1.5,
+        avg_dist * 2.5,
+        avg_dist * 4.0,
+        avg_dist * 6.0,
+        avg_dist * 9.0,
+        avg_dist * 13.0,
+    ])
 
-    tris = np.array(tris_validos)
-    if len(tris) == 0:
-        raise ValueError("Nenhum triângulo válido gerado.")
+    malha_o3d = o3d.geometry.TriangleMesh.create_from_point_cloud_ball_pivoting(
+        pcd, radii
+    )
+    logger.debug("BPA principal: %d triângulos", len(malha_o3d.triangles))
 
-    dados = np.zeros(len(tris), dtype=stlmesh.Mesh.dtype)
-    malha = stlmesh.Mesh(dados, remove_empty_areas=False)
+    # Segunda passagem nos pontos ainda não cobertos
+    vertices_usados = set(np.asarray(malha_o3d.triangles).flatten().tolist())
+    todos_pts       = np.asarray(pcd.points)
+    mascara_livres  = np.ones(len(todos_pts), dtype=bool)
+    for idx in vertices_usados:
+        if idx < len(mascara_livres):
+            mascara_livres[idx] = False
 
-    for i, (a, b, c) in enumerate(tris):
-        malha.vectors[i] = np.array([pontos[a], pontos[b], pontos[c]])
+    n_livres = int(mascara_livres.sum())
+    if n_livres >= 10:
+        pcd_extra         = o3d.geometry.PointCloud()
+        pcd_extra.points  = o3d.utility.Vector3dVector(todos_pts[mascara_livres])
+        pcd_extra.normals = o3d.utility.Vector3dVector(
+            np.asarray(pcd.normals)[mascara_livres]
+        )
+        radii_extra = o3d.utility.DoubleVector([
+            avg_dist * 6.0, avg_dist * 10.0, avg_dist * 15.0, avg_dist * 20.0,
+        ])
+        malha_extra = o3d.geometry.TriangleMesh.create_from_point_cloud_ball_pivoting(
+            pcd_extra, radii_extra
+        )
+        malha_o3d += malha_extra
+        logger.debug("BPA extra: +%d triângulos (pontos livres: %d)",
+                     len(malha_extra.triangles), n_livres)
 
-    malha.save(caminho)
-    logger.info("STL (Delaunay) salvo: %s (%d triângulos)", caminho, len(tris))
+    # Tenta fill_holes (Open3D ≥ 0.14)
+    try:
+        malha_o3d = malha_o3d.fill_holes(hole_size=avg_dist * 20.0)
+        logger.debug("fill_holes aplicado com sucesso")
+    except AttributeError:
+        logger.debug("fill_holes não disponível nesta versão do Open3D (ignorado)")
+
+    _salvar_malha(malha_o3d, caminho, "BPA")

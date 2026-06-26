@@ -1,0 +1,66 @@
+[28-05-2026 11:02:43] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_05_2026.log (nível: INFO)
+[28-05-2026 11:02:43] [INFO    ] __main__ — ============================================================
+[28-05-2026 11:02:43] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-05-2026 11:02:43] [INFO    ] __main__ — ============================================================
+[28-05-2026 11:02:59] [INFO    ] interface — Modo alterado para: Simulado
+[28-05-2026 11:03:22] [INFO    ] logica — Iniciando reconstrução de superfície — 2500 pontos
+[28-05-2026 11:03:22] [INFO    ] logica — Tentando Poisson Surface Reconstruction (depth=9)…
+[28-05-2026 11:03:24] [INFO    ] logica — STL (Poisson) salvo: C:/Users/yande/Documents/Trabalho Pet/scanner-3D/teste.stl (16724 triângulos)
+[28-05-2026 11:04:26] [INFO    ] logica — Iniciando reconstrução de superfície — 2500 pontos
+[28-05-2026 11:04:26] [INFO    ] logica — Tentando Poisson Surface Reconstruction (depth=9)…
+[28-05-2026 11:04:26] [INFO    ] logica — STL (Poisson) salvo: C:/Users/yande/Documents/Trabalho Pet/scanner-3D/teste.stl (10137 triângulos)
+[28-05-2026 11:04:29] [INFO    ] interface — EXECUTAR — ref=False sim=True tol=3.0 defeito=nenhum forma=cilindro
+[28-05-2026 11:04:30] [INFO    ] logica — Executando ICP para alinhar nuvens...
+[28-05-2026 11:04:30] [INFO    ] logica — ICP concluído — erro residual: 1.4808 mm
+[28-05-2026 11:04:30] [INFO    ] logica — Inspeção concluída — defeitos=546 (10.9%) | dist_med=0.921 mm | dist_max=5.369 mm
+[28-05-2026 11:04:32] [INFO    ] interface — Resultado: ❌ PEÇA COM DEFEITO
+[28-05-2026 11:04:44] [INFO    ] logica — Iniciando reconstrução de superfície — 2500 pontos
+[28-05-2026 11:04:44] [INFO    ] logica — Tentando Poisson Surface Reconstruction (depth=9)…
+[28-05-2026 11:04:45] [INFO    ] logica — STL (Poisson) salvo: C:/Users/yande/Documents/Trabalho Pet/scanner-3D/teste.stl (10137 triângulos)
+[28-05-2026 11:10:00] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_05_2026.log (nível: INFO)
+[28-05-2026 11:10:00] [INFO    ] __main__ — ============================================================
+[28-05-2026 11:10:00] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-05-2026 11:10:00] [INFO    ] __main__ — ============================================================
+[28-05-2026 11:10:18] [INFO    ] interface — Modo alterado para: Simulado
+[28-05-2026 11:10:28] [INFO    ] logica — Iniciando reconstrução de superfície — 2418 pontos
+[28-05-2026 11:10:28] [INFO    ] logica — Tentando Poisson Surface Reconstruction (depth=9)…
+[28-05-2026 11:10:29] [INFO    ] logica — STL (Poisson) salvo: C:/Users/yande/Documents/Trabalho Pet/scanner-3D/teste.stl (9947 triângulos)
+[28-05-2026 14:06:29] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_05_2026.log (nível: INFO)
+[28-05-2026 14:06:29] [INFO    ] __main__ — ============================================================
+[28-05-2026 14:06:29] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-05-2026 14:06:29] [INFO    ] __main__ — ============================================================
+[28-05-2026 14:06:34] [INFO    ] interface — Modo alterado para: Simulado
+[28-05-2026 14:06:43] [INFO    ] logica — Iniciando reconstrução de superfície — 2500 pontos
+[28-05-2026 14:06:43] [INFO    ] logica — Tentando Poisson Surface Reconstruction (depth=9)…
+[28-05-2026 14:06:43] [INFO    ] logica — STL (Poisson) salvo: C:/Users/yande/Documents/Trabalho Pet/scanner-3D/teste.stl (11087 triângulos)
+[28-05-2026 14:07:12] [INFO    ] logica — Iniciando reconstrução de superfície — 2500 pontos
+[28-05-2026 14:07:12] [INFO    ] logica — Tentando Poisson Surface Reconstruction (depth=9)…
+[28-05-2026 14:07:12] [INFO    ] logica — STL (Poisson) salvo: C:/Users/yande/Documents/Trabalho Pet/scanner-3D/teste.stl (11089 triângulos)
+[28-05-2026 14:10:24] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_05_2026.log (nível: INFO)
+[28-05-2026 14:10:24] [INFO    ] __main__ — ============================================================
+[28-05-2026 14:10:24] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-05-2026 14:10:24] [INFO    ] __main__ — ============================================================
+[28-05-2026 14:10:26] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_05_2026.log (nível: INFO)
+[28-05-2026 14:10:26] [INFO    ] __main__ — ============================================================
+[28-05-2026 14:10:26] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-05-2026 14:10:26] [INFO    ] __main__ — ============================================================
+[28-05-2026 14:10:28] [INFO    ] interface — Modo alterado para: Simulado
+[28-05-2026 14:10:35] [INFO    ] logica — Iniciando reconstrução de superfície — 2500 pontos
+[28-05-2026 14:10:35] [INFO    ] logica — Tentando Poisson Surface Reconstruction (depth=9)…
+[28-05-2026 14:10:35] [INFO    ] logica — STL (Poisson) salvo: C:/Users/yande/Documents/Trabalho Pet/scanner-3D/teste.stl (10653 triângulos)
+[28-05-2026 14:11:13] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_05_2026.log (nível: INFO)
+[28-05-2026 14:11:13] [INFO    ] __main__ — ============================================================
+[28-05-2026 14:11:13] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-05-2026 14:11:13] [INFO    ] __main__ — ============================================================
+[28-05-2026 14:11:17] [INFO    ] interface — Modo alterado para: Simulado
+[28-05-2026 14:11:29] [INFO    ] logica — Iniciando reconstrução de superfície — 2500 pontos
+[28-05-2026 14:11:29] [INFO    ] logica — Tentando Poisson Surface Reconstruction (depth=9)…
+[28-05-2026 14:11:29] [INFO    ] logica — STL (Poisson) salvo: C:/Users/yande/Documents/Trabalho Pet/scanner-3D/teste1.stl (11159 triângulos)
+[28-05-2026 14:13:11] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_05_2026.log (nível: INFO)
+[28-05-2026 14:13:11] [INFO    ] __main__ — ============================================================
+[28-05-2026 14:13:11] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-05-2026 14:13:11] [INFO    ] __main__ — ============================================================
+[28-05-2026 14:13:17] [INFO    ] interface — Modo alterado para: Simulado
+[28-05-2026 14:13:23] [INFO    ] logica — Iniciando reconstrução de superfície — 2500 pontos
+[28-05-2026 14:13:24] [INFO    ] logica — Tentando Poisson Surface Reconstruction (depth=9)…
+[28-05-2026 14:13:24] [INFO    ] logica — STL (Poisson) salvo: C:/Users/yande/Documents/Trabalho Pet/scanner-3D/teste1.stl (10907 triângulos)

@@ -1,0 +1,279 @@
+[28-04-2026 16:27:09] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 16:27:09] [INFO    ] __main__ — ============================================================
+[28-04-2026 16:27:09] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 16:27:09] [INFO    ] __main__ — ============================================================
+[28-04-2026 16:27:24] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 16:30:33] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 16:30:33] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 16:30:33] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 16:30:33] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 16:30:33] [ERROR   ] serial_comm — Erro na porta COM6: could not open port 'COM6': PermissionError(13, 'Acesso negado.', None, 5)
+[28-04-2026 16:30:35] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 16:30:39] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 16:30:41] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 16:30:41] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 16:30:41] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 16:30:41] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 16:30:41] [ERROR   ] serial_comm — Erro na porta COM6: could not open port 'COM6': PermissionError(13, 'Acesso negado.', None, 5)
+[28-04-2026 16:30:43] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 16:30:53] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 16:30:58] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 16:30:58] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 16:30:58] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 16:30:58] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 16:30:58] [ERROR   ] serial_comm — Erro na porta COM6: could not open port 'COM6': PermissionError(13, 'Acesso negado.', None, 5)
+[28-04-2026 16:31:00] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 16:33:55] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 16:33:55] [INFO    ] __main__ — ============================================================
+[28-04-2026 16:33:55] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 16:33:55] [INFO    ] __main__ — ============================================================
+[28-04-2026 16:33:58] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 16:34:00] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 16:34:00] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 16:34:00] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 16:34:00] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 16:34:00] [ERROR   ] serial_comm — Erro na porta COM6: could not open port 'COM6': PermissionError(13, 'Acesso negado.', None, 5)
+[28-04-2026 16:34:02] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 16:36:42] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 16:36:42] [INFO    ] __main__ — ============================================================
+[28-04-2026 16:36:42] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 16:36:42] [INFO    ] __main__ — ============================================================
+[28-04-2026 16:36:45] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 16:36:46] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 16:36:46] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 16:36:46] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 16:36:46] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 16:36:46] [ERROR   ] serial_comm — Erro na porta COM6: could not open port 'COM6': PermissionError(13, 'Acesso negado.', None, 5)
+[28-04-2026 16:36:48] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 16:40:25] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 16:40:25] [INFO    ] __main__ — ============================================================
+[28-04-2026 16:40:25] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 16:40:25] [INFO    ] __main__ — ============================================================
+[28-04-2026 16:40:27] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 16:40:28] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 16:40:28] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 16:40:28] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 16:40:28] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 16:40:28] [ERROR   ] serial_comm — Erro na porta COM6: could not open port 'COM6': PermissionError(13, 'Acesso negado.', None, 5)
+[28-04-2026 16:40:30] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 16:41:20] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 16:41:20] [INFO    ] __main__ — ============================================================
+[28-04-2026 16:41:20] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 16:41:20] [INFO    ] __main__ — ============================================================
+[28-04-2026 16:41:23] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 16:41:24] [INFO    ] serial_comm — Arduino detectado em COM7 (USB-SERIAL CH340 (COM7))
+[28-04-2026 16:41:24] [INFO    ] serial_comm — Arduino detectado em COM7 (USB-SERIAL CH340 (COM7))
+[28-04-2026 16:41:24] [INFO    ] serial_comm — Conectando em COM7 @ 9600 baud…
+[28-04-2026 16:41:24] [INFO    ] serial_comm — Conectando em COM7 @ 9600 baud…
+[28-04-2026 16:41:24] [ERROR   ] serial_comm — Erro na porta COM7: could not open port 'COM7': PermissionError(13, 'Acesso negado.', None, 5)
+[28-04-2026 16:41:26] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 16:41:35] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 16:41:35] [INFO    ] __main__ — ============================================================
+[28-04-2026 16:41:35] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 16:41:35] [INFO    ] __main__ — ============================================================
+[28-04-2026 16:41:42] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 16:41:44] [INFO    ] serial_comm — Arduino detectado em COM7 (USB-SERIAL CH340 (COM7))
+[28-04-2026 16:41:44] [INFO    ] serial_comm — Arduino detectado em COM7 (USB-SERIAL CH340 (COM7))
+[28-04-2026 16:41:44] [INFO    ] serial_comm — Conectando em COM7 @ 9600 baud…
+[28-04-2026 16:41:44] [INFO    ] serial_comm — Conectando em COM7 @ 9600 baud…
+[28-04-2026 16:41:44] [ERROR   ] serial_comm — Erro na porta COM7: could not open port 'COM7': PermissionError(13, 'Acesso negado.', None, 5)
+[28-04-2026 16:41:46] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 16:49:02] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 16:49:02] [INFO    ] __main__ — ============================================================
+[28-04-2026 16:49:02] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 16:49:02] [INFO    ] __main__ — ============================================================
+[28-04-2026 16:49:12] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 16:49:13] [INFO    ] serial_comm — Arduino detectado em COM7 (USB-SERIAL CH340 (COM7))
+[28-04-2026 16:49:13] [INFO    ] serial_comm — Arduino detectado em COM7 (USB-SERIAL CH340 (COM7))
+[28-04-2026 16:49:13] [INFO    ] serial_comm — Conectando em COM7 @ 9600 baud…
+[28-04-2026 16:49:13] [INFO    ] serial_comm — Conectando em COM7 @ 9600 baud…
+[28-04-2026 16:49:13] [ERROR   ] serial_comm — Erro na porta COM7: could not open port 'COM7': PermissionError(13, 'Acesso negado.', None, 5)
+[28-04-2026 16:49:15] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 16:49:23] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 16:49:24] [INFO    ] serial_comm — Arduino detectado em COM7 (USB-SERIAL CH340 (COM7))
+[28-04-2026 16:49:24] [INFO    ] serial_comm — Arduino detectado em COM7 (USB-SERIAL CH340 (COM7))
+[28-04-2026 16:49:24] [INFO    ] serial_comm — Conectando em COM7 @ 9600 baud…
+[28-04-2026 16:49:24] [INFO    ] serial_comm — Conectando em COM7 @ 9600 baud…
+[28-04-2026 16:49:24] [ERROR   ] serial_comm — Erro na porta COM7: could not open port 'COM7': PermissionError(13, 'Acesso negado.', None, 5)
+[28-04-2026 16:49:24] [ERROR   ] serial_comm — Erro na porta COM7: could not open port 'COM7': PermissionError(13, 'Acesso negado.', None, 5)
+[28-04-2026 16:49:32] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 16:49:34] [INFO    ] serial_comm — Arduino detectado em COM7 (USB-SERIAL CH340 (COM7))
+[28-04-2026 16:49:34] [INFO    ] serial_comm — Conectando em COM7 @ 9600 baud…
+[28-04-2026 16:49:34] [ERROR   ] serial_comm — Erro na porta COM7: could not open port 'COM7': PermissionError(13, 'Acesso negado.', None, 5)
+[28-04-2026 16:49:34] [INFO    ] serial_comm — Arduino detectado em COM7 (USB-SERIAL CH340 (COM7))
+[28-04-2026 16:49:34] [INFO    ] serial_comm — Conectando em COM7 @ 9600 baud…
+[28-04-2026 16:49:34] [ERROR   ] serial_comm — Erro na porta COM7: could not open port 'COM7': PermissionError(13, 'Acesso negado.', None, 5)
+[28-04-2026 16:56:28] [ERROR   ] serial_comm — Erro na porta COM7: GetOverlappedResult failed (PermissionError(13, 'Acesso negado.', None, 5))
+[28-04-2026 16:56:47] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 16:56:55] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 16:56:55] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 16:56:55] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 16:56:55] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 16:56:55] [ERROR   ] serial_comm — Erro na porta COM6: could not open port 'COM6': PermissionError(13, 'Acesso negado.', None, 5)
+[28-04-2026 16:56:57] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 17:01:47] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 17:01:47] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:01:47] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 17:01:47] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:02:04] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:02:05] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:02:05] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:02:07] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 17:03:17] [INFO    ] interface — Modo alterado para: Simulado
+[28-04-2026 17:03:19] [INFO    ] interface — Modo alterado para: Real
+[28-04-2026 17:03:22] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:03:24] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:03:24] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:03:24] [ERROR   ] serial_comm — Erro na porta COM6: could not open port 'COM6': PermissionError(13, 'Acesso negado.', None, 5)
+[28-04-2026 17:03:29] [ERROR   ] serial_comm — Erro na porta COM6: GetOverlappedResult failed (PermissionError(13, 'Acesso negado.', None, 5))
+[28-04-2026 17:03:34] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:03:36] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:03:36] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:03:38] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 17:04:46] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 17:04:46] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:04:46] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 17:04:46] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:04:49] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:04:51] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:04:51] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:04:53] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 17:08:36] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 17:08:36] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:08:36] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 17:08:36] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:08:39] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:08:40] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:08:40] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:08:42] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 17:09:54] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:09:55] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:09:55] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:09:55] [ERROR   ] serial_comm — Erro na porta COM6: could not open port 'COM6': PermissionError(13, 'Acesso negado.', None, 5)
+[28-04-2026 17:10:04] [ERROR   ] serial_comm — Erro na porta COM6: GetOverlappedResult failed (PermissionError(13, 'Acesso negado.', None, 5))
+[28-04-2026 17:10:12] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 17:10:12] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:10:12] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 17:10:12] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:10:15] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:10:16] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:10:16] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:10:18] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 17:12:45] [INFO    ] interface — Modo alterado para: Simulado
+[28-04-2026 17:12:46] [INFO    ] interface — Modo alterado para: Real
+[28-04-2026 17:13:40] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 17:13:40] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:13:40] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 17:13:40] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:13:43] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:13:44] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:13:44] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:13:46] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 17:15:57] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 17:15:57] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:15:57] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 17:15:57] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:16:06] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 17:16:06] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:16:06] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 17:16:06] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:16:09] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:16:10] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:16:10] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:16:12] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 17:17:12] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 17:17:12] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:17:12] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 17:17:12] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:17:16] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:17:17] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:17:17] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:17:19] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 17:19:54] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 17:19:54] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:19:54] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 17:19:54] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:19:56] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:19:57] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:19:57] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:19:59] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 17:25:23] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 17:25:23] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:25:23] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 17:25:23] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:25:26] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:25:27] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:25:27] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:25:29] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 17:29:50] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 17:29:50] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:29:50] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 17:29:50] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:29:52] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:29:53] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:29:53] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:29:55] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 17:34:42] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 17:34:42] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:34:42] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 17:34:42] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:34:45] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:34:46] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:34:46] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:34:48] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 17:38:02] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:38:04] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:38:04] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:38:04] [ERROR   ] serial_comm — Erro na porta COM6: could not open port 'COM6': PermissionError(13, 'Acesso negado.', None, 5)
+[28-04-2026 17:38:10] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 17:38:10] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:38:10] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 17:38:10] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:38:25] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:38:26] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:38:26] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:38:28] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 17:46:25] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 17:46:25] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:46:25] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 17:46:25] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:46:28] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:46:29] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:46:29] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:46:31] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 17:47:13] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 17:47:13] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:47:13] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 17:47:13] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:47:16] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:47:17] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:47:17] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:47:19] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 17:48:57] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 17:48:57] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:48:57] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 17:48:57] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:49:03] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:49:04] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:49:04] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:49:06] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 17:52:13] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 17:52:13] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:52:13] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 17:52:13] [INFO    ] __main__ — ============================================================
+[28-04-2026 17:52:16] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 17:52:18] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 17:52:18] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 17:52:20] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…
+[28-04-2026 18:03:04] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 18:03:04] [INFO    ] __main__ — ============================================================
+[28-04-2026 18:03:04] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 18:03:04] [INFO    ] __main__ — ============================================================
+[28-04-2026 18:03:18] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_28_04_2026.log (nível: INFO)
+[28-04-2026 18:03:18] [INFO    ] __main__ — ============================================================
+[28-04-2026 18:03:18] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[28-04-2026 18:03:18] [INFO    ] __main__ — ============================================================
+[28-04-2026 18:03:22] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[28-04-2026 18:03:24] [INFO    ] serial_comm — Arduino detectado em COM6 (USB-SERIAL CH340 (COM6))
+[28-04-2026 18:03:24] [INFO    ] serial_comm — Conectando em COM6 @ 9600 baud…
+[28-04-2026 18:03:26] [INFO    ] serial_comm — Conexão estabelecida — aguardando dados…

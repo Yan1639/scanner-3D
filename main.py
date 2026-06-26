@@ -35,7 +35,7 @@ def configurar_logging() -> None:
       • Console (INFO) — feedback imediato ao desenvolvedor
       • Arquivo rotativo diário em logs/ — rastreabilidade industrial
 
-    Formato: ``[2026-02-18 14:03:22] [INFO    ] logica — ICP convergiu em 12 it.``
+    Formato: ``[2026-02-18 14:03:22] [INFO] logica — ICP convergiu em 12 it.``
     """
     Config.garantir_dirs()
 

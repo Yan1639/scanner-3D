@@ -12,6 +12,7 @@ Versão: 2.0 (UI Redesign)
 """
 
 import os
+import queue
 import logging
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
@@ -101,7 +102,7 @@ class FlatButton(tk.Frame):
 
 
 class SectionCard(tk.Frame):
-    """Card com título e linha separadora no topo."""
+    """caixa com título e linha separadora no topo."""
 
     def __init__(self, parent, title="", icon="", **kw):
         super().__init__(parent, bg=BG2, **kw)
@@ -129,7 +130,7 @@ class SectionCard(tk.Frame):
 
 
 class TogglePill(tk.Frame):
-    """Toggle estilo pílula ON/OFF."""
+    """alternar estilo pílula ON/OFF."""
 
     def __init__(self, parent, variable, on_change=None, **kw):
         super().__init__(parent, bg=BG2, **kw)
@@ -443,6 +444,9 @@ class Interface:
         # ── Modo real: ação ───────────────────────────────────────────────────
         self.modo_op_real = SectionCard(p, title="AÇÃO (MODO REAL)", icon="▶")
         self._atualizar_radios_modo_real()
+        # Mostra o card imediatamente se o modo padrão for real
+        if not self.var_modo.get():
+            self.modo_op_real.pack(**pad)
 
         # ── Exportações ───────────────────────────────────────────────────────
         card_exp = SectionCard(p, title="EXPORTAR", icon="↗")
@@ -610,6 +614,8 @@ class Interface:
             self.frm_forma.pack_forget()
             self.frm_defeito.pack_forget()
             self.modo_op_real.pack(after=self.frm_prev_src, **pad)
+            self.pontos_teste_ultimo = None
+            self._atualizar_previa()
             self._atualizar_radios_modo_real()
             self.var_previa_fonte.set("real")
 
@@ -691,14 +697,18 @@ class Interface:
 
     def _atualizar_modo_real_vis(self):
         modo = self.var_previa_comparacao.get()
-        if modo == "Comparação" and os.path.exists(Config.ARQUIVO_REFERENCIA):
-            try:
-                pts = logica.carregar_xyz(Config.ARQUIVO_REFERENCIA)
-                self._plot_nuvem(self.ax_previa, pts, "Referência carregada")
-            except Exception as e:
-                messagebox.showwarning("Aviso", str(e))
-        elif modo == "Pré-Visualização" and self.pontos_teste_ultimo is not None:
-            self._plot_nuvem(self.ax_previa, self.pontos_teste_ultimo, "Última peça capturada")
+        if modo == "Comparação":
+            if self.pontos_teste_ultimo is not None:
+                self._plot_nuvem(self.ax_previa,self.pontos_teste_ultimo,"Última peça capturada  ·  modo comparação")
+            else:
+                self._plot_nuvem(self.ax_previa,None,"Aguardando leitura real para comparação",)
+
+        elif modo == "Pré-Visualização":
+            if self.pontos_teste_ultimo is None:
+                self._plot_nuvem(self.ax_previa, None, "Sem dados - Execute uma Leitura Real")
+            else:
+                self._plot_nuvem(self.ax_previa, self.pontos_teste_ultimo,
+                                 "Última peça capturada ·  modo Pré-Visualização ")
 
     # ─────────────────────────────────────────────────────────────────────────
     # Gerenciamento STL
@@ -760,20 +770,36 @@ class Interface:
         messagebox.showinfo("Leitura", "Iniciando leitura do sensor…\nAguarde o sinal FIM do Arduino.")
 
         if modo_op == "Pré-Visualização":
+            self._abrir_janela_tempo_real()
+
             serial_comm.ler_dados_async(
-                callback_pontos=lambda pts: self.janela.after(0, lambda: self._cb_previa_real(pts)),
-                callback_erro=lambda msg: self.janela.after(0, lambda: messagebox.showerror("Erro serial", msg)),
+                callback_pontos=lambda pts: self.janela.after(0, lambda p=pts: self._finalizar_rt(p)),
+                callback_ponto_novo=lambda xyz: self._rt_queue.put(xyz),   # thread-safe, sem after()
+                callback_erro=lambda msg: self.janela.after(0, self._tratar_erro_serial, msg),
             )
         elif modo_op == "Comparação":
             pontos_ref = self._carregar_referencia()
             if pontos_ref is None:
                 return
+
+            self._abrir_janela_tempo_real()
+
             serial_comm.ler_dados_async(
                 callback_pontos=lambda pts: self.janela.after(
-                    0, lambda: self._cb_comparar(pts, pontos_ref, tol_mm)
+                    0, lambda p=pts: [
+                        self._finalizar_rt(p),
+                        self._comparar_e_exibir(
+                            pontos_ref,
+                            self._pts_xyz(p),
+                            tol_mm)]
                 ),
-                callback_erro=lambda msg: self.janela.after(0, lambda: messagebox.showerror("Erro serial", msg)),
+                callback_ponto_novo=lambda xyz: self._rt_queue.put(xyz),   # thread-safe, sem after()
+                callback_erro=lambda msg: self.janela.after(0, self._tratar_erro_serial, msg),
             )
+    def _tratar_erro_serial(self, message):
+        messagebox.showerror("Erro serial", message)
+        if hasattr(self, "win_rt") and self.win_rt.winfo_exists():
+            self.win_rt.destroy()
 
     # ─────────────────────────────────────────────────────────────────────────
     # Referência
@@ -799,7 +825,8 @@ class Interface:
         messagebox.showinfo("Referência Real", "Inicie a leitura do sensor.\nAguarde o sinal FIM.")
         serial_comm.ler_dados_async(
             callback_pontos=lambda pts: self.janela.after(0, lambda: self._salvar_referencia(pts, "real")),
-            callback_erro=lambda msg: self.janela.after(0, lambda: messagebox.showerror("Erro serial", msg)),
+            callback_erro=lambda msg: self.janela.after(0, self._tratar_erro_serial,
+            msg),
         )
         return None
 
@@ -865,6 +892,12 @@ class Interface:
     def _cb_comparar(self, pts, pontos_ref, tol_mm):
         self.pontos_teste_ultimo = pts
         self._comparar_e_exibir(pontos_ref, pts, tol_mm)
+
+    def _pts_xyz(self, pts):
+        """Garante que o array tem apenas 3 colunas (x, y, z), descartando raio e theta se necessário."""
+        if pts is not None and pts.ndim == 2 and pts.shape[1] == 5:
+            return pts[:, 2:5]
+        return pts
 
     # ─────────────────────────────────────────────────────────────────────────
     # Janela de comparação visual
@@ -1066,24 +1099,133 @@ class Interface:
         if not caminho:
             return
 
-        metodo = messagebox.askquestion(
-            "Método STL",
-            "Usar triangulação Delaunay (melhor para formas não-convexas)?\n\n"
-            "SIM → Delaunay 2.5D (recomendado)\n"
-            "NÃO → Casco Convexo (mais rápido)",
-        )
-
+        # ── Execução — Ball Pivoting Algorithm ────────────────────────────────
+        self.lbl_viewer_status.config(text="Exportando STL (BPA)…")
         try:
-            if metodo == "yes":
-                logica.exportar_stl_delaunay(pontos, caminho)
-            else:
-                logica.exportar_stl_convexo(pontos, caminho)
+            logica.exportar_stl_bpa(pontos, caminho)
+            self.lbl_viewer_status.config(text="STL exportado com sucesso.")
             messagebox.showinfo("Exportar STL", f"STL salvo em:\n{caminho}")
+        except ImportError as e:
+            messagebox.showerror(
+                "Dependência ausente",
+                f"{e}\n\nInstale com:\n  pip install open3d",
+            )
+            self.lbl_viewer_status.config(text="Erro ao exportar STL.")
         except Exception as e:
             messagebox.showerror("Exportar STL", str(e))
+            self.lbl_viewer_status.config(text="Erro ao exportar STL.")
 
     def _exportar_stl_previa(self):
         self._exportar_stl(self.pontos_previa, "Salvar STL da Prévia")
 
     def _exportar_stl_teste(self):
         self._exportar_stl(self.pontos_teste_ultimo, "Salvar STL do Teste")
+
+        # ─────────────────────────────────────────────────────────────────────────
+        # Janela de Tempo Real NOVO
+        # ─────────────────────────────────────────────────────────────────────────
+
+    def _abrir_janela_tempo_real(self):
+        """Cria a janela de acompanhamento ao vivo da leitura serial."""
+        self.win_rt = tk.Toplevel(self.janela)
+        self.win_rt.title("Captura em Tempo Real")
+        self.win_rt.geometry("800x600")
+        self.win_rt.configure(bg=BG)
+
+        # Barra de status superior
+        bar = tk.Frame(self.win_rt, bg=BG2, highlightbackground=BORDER, highlightthickness=1)
+        bar.pack(fill="x")
+        self.lbl_rt_status = tk.Label(bar, text="Iniciando sensor...", bg=BG2, fg=ACCENT, font=FONT_TITLE)
+        self.lbl_rt_status.pack(pady=8)
+
+        # Plot 3D
+        self.fig_rt = plt.Figure(figsize=(8, 6), facecolor=BG2)
+        self.ax_rt = self.fig_rt.add_subplot(111, projection="3d")
+        self.ax_rt.set_facecolor(BG)
+
+        self.canvas_rt = FigureCanvasTkAgg(self.fig_rt, master=self.win_rt)
+        self.canvas_rt.get_tk_widget().configure(bg=BG, highlightthickness=0)
+        self.canvas_rt.get_tk_widget().pack(fill="both", expand=True, padx=12, pady=12)
+
+        # Listas para acumular os dados
+        self.rt_xs, self.rt_ys, self.rt_zs = [], [], []
+
+        # Fila thread-safe: o thread serial empurra; o Tkinter drena a cada 50 ms
+        self._rt_queue = queue.Queue()
+        self._rt_poll_id = self.win_rt.after(50, self._poll_rt_queue)
+
+    def _poll_rt_queue(self):
+        """Drena a fila de pontos e redesenha o plot (chamado a cada 50 ms pelo Tkinter)."""
+        if not hasattr(self, "win_rt") or not self.win_rt.winfo_exists():
+            return
+
+        # Consome até 50 pontos por tick para não travar a UI
+        updated = False
+        try:
+            for _ in range(50):
+                x, y, z = self._rt_queue.get_nowait()
+                self.rt_xs.append(x)
+                self.rt_ys.append(y)
+                self.rt_zs.append(z)
+                updated = True
+        except queue.Empty:
+            pass
+
+        if updated:
+            n = len(self.rt_xs)
+            self.lbl_rt_status.config(
+                text=f"Capturando ao vivo: {n} pontos lidos"
+            )
+            self.ax_rt.cla()
+            self.ax_rt.set_facecolor(BG)
+            self.ax_rt.scatter(self.rt_xs, self.rt_ys, self.rt_zs, c=ACCENT, s=3)
+            self.ax_rt.set_title("Nuvem de Pontos — Ao Vivo", color=TEXT, fontsize=10)
+            self.ax_rt.tick_params(colors=TEXT_DIM, labelsize=7)
+            for pane in [self.ax_rt.xaxis.pane, self.ax_rt.yaxis.pane, self.ax_rt.zaxis.pane]:
+                pane.fill = False
+                pane.set_edgecolor(BORDER)
+            self.canvas_rt.draw()      # draw() garante renderização imediata
+
+        # Reagenda o próximo tick
+        self._rt_poll_id = self.win_rt.after(50, self._poll_rt_queue)
+
+    def _finalizar_rt(self, pts):
+        """Callback executado quando o Arduino envia 'FIM'."""
+        # Para o polling periódico
+        if hasattr(self, "_rt_poll_id") and self._rt_poll_id is not None:
+            try:
+                self.win_rt.after_cancel(self._rt_poll_id)
+            except Exception:
+                pass
+            self._rt_poll_id = None
+
+        # Drena pontos que ainda estejam na fila
+        if hasattr(self, "_rt_queue"):
+            try:
+                while True:
+                    x, y, z = self._rt_queue.get_nowait()
+                    self.rt_xs.append(x)
+                    self.rt_ys.append(y)
+                    self.rt_zs.append(z)
+            except queue.Empty:
+                pass
+
+        # Redesenho final completo
+        if hasattr(self, "ax_rt") and len(self.rt_xs) > 0:
+            self.ax_rt.cla()
+            self.ax_rt.set_facecolor(BG)
+            self.ax_rt.scatter(self.rt_xs, self.rt_ys, self.rt_zs, c=ACCENT, s=3)
+            self.ax_rt.set_title("Nuvem de Pontos — Captura Finalizada", color=TEXT, fontsize=10)
+            self.ax_rt.tick_params(colors=TEXT_DIM, labelsize=7)
+            for pane in [self.ax_rt.xaxis.pane, self.ax_rt.yaxis.pane, self.ax_rt.zaxis.pane]:
+                pane.fill = False
+                pane.set_edgecolor(BORDER)
+            self.canvas_rt.draw()
+
+        # pts tem shape (N,5): [raio, theta, x, y, z] — extrai só x,y,z para exibição
+        pts_xyz = self._pts_xyz(pts)
+        self._cb_previa_real(pts_xyz)
+        if hasattr(self, "lbl_rt_status") and self.win_rt.winfo_exists():
+            self.lbl_rt_status.config(
+                text=f"Concluído! {len(pts_xyz)} pontos capturados no total.", fg=GREEN
+            )

@@ -1,0 +1,41 @@
+[03-04-2026 13:08:17] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_03_04_2026.log (nível: INFO)
+[03-04-2026 13:08:17] [INFO    ] __main__ — ============================================================
+[03-04-2026 13:08:17] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[03-04-2026 13:08:17] [INFO    ] __main__ — ============================================================
+[03-04-2026 13:08:36] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[03-04-2026 13:08:37] [WARNING ] serial_comm — Nenhuma porta serial detectada
+[03-04-2026 13:08:37] [ERROR   ] serial_comm — Porta do Arduino não encontrada. Verifique a conexão.
+[03-04-2026 13:08:39] [INFO    ] interface — Modo alterado para: Simulado
+[03-04-2026 13:10:46] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_03_04_2026.log (nível: INFO)
+[03-04-2026 13:10:46] [INFO    ] __main__ — ============================================================
+[03-04-2026 13:10:46] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[03-04-2026 13:10:46] [INFO    ] __main__ — ============================================================
+[03-04-2026 13:10:54] [INFO    ] interface — EXECUTAR — ref=False sim=False tol=3.0 defeito=nenhum forma=cilindro
+[03-04-2026 13:10:56] [WARNING ] serial_comm — Nenhuma porta serial detectada
+[03-04-2026 13:10:56] [ERROR   ] serial_comm — Porta do Arduino não encontrada. Verifique a conexão.
+[03-04-2026 13:13:03] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_03_04_2026.log (nível: INFO)
+[03-04-2026 13:13:03] [INFO    ] __main__ — ============================================================
+[03-04-2026 13:13:03] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[03-04-2026 13:13:03] [INFO    ] __main__ — ============================================================
+[03-04-2026 13:13:04] [CRITICAL] __main__ — Falha crítica ao iniciar a aplicação: Interface._mostrar_dados_real() missing 1 required positional argument: 'self'
+Traceback (most recent call last):
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\main.py", line 88, in main
+    from interface import Interface
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 202, in <module>
+    class Interface:
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 1096, in Interface
+    _mostrar_dados_real()
+TypeError: Interface._mostrar_dados_real() missing 1 required positional argument: 'self'
+[03-04-2026 13:14:54] [INFO    ] __main__ — Logging inicializado — arquivo: logs\inspecao_03_04_2026.log (nível: INFO)
+[03-04-2026 13:14:54] [INFO    ] __main__ — ============================================================
+[03-04-2026 13:14:54] [INFO    ] __main__ — Sistema de Inspeção 3D v2.0 — iniciando
+[03-04-2026 13:14:54] [INFO    ] __main__ — ============================================================
+[03-04-2026 13:14:57] [CRITICAL] __main__ — Falha crítica ao iniciar a aplicação: Interface._mostrar_dados_real() missing 1 required positional argument: 'self'
+Traceback (most recent call last):
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\main.py", line 88, in main
+    from interface import Interface
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 202, in <module>
+    class Interface:
+  File "C:\Users\yande\Documents\Trabalho Pet\scanner-3D\interface.py", line 1096, in Interface
+    _mostrar_dados_real()
+TypeError: Interface._mostrar_dados_real() missing 1 required positional argument: 'self'

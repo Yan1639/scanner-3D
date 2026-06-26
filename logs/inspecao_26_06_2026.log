@@ -1,0 +1,4 @@
+[26-06-2026 11:10:34] [ERROR   ] serial_comm — Erro na porta COM7: GetOverlappedResult failed (PermissionError(13, 'Acesso negado.', None, 5))
+[26-06-2026 11:12:03] [ERROR   ] serial_comm — Erro na porta COM7: GetOverlappedResult failed (PermissionError(13, 'Acesso negado.', None, 5))
+[26-06-2026 11:12:21] [ERROR   ] serial_comm — Erro na porta COM7: GetOverlappedResult failed (PermissionError(13, 'Acesso negado.', None, 5))
+[26-06-2026 11:15:45] [ERROR   ] serial_comm — Erro na porta COM7: GetOverlappedResult failed (PermissionError(13, 'Acesso negado.', None, 5))
